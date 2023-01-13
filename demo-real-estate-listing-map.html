@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="SemiColonWeb" />
+
+	<!-- Stylesheets
+	============================================= -->
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i|Roboto:300,400,500,700|Rubik:400,600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="css/dark.css" type="text/css" />
+
+	<!-- Real Estate Demo Specific Stylesheet -->
+	<link rel="stylesheet" href="demos/real-estate/real-estate.css" type="text/css" />
+	<link rel="stylesheet" href="demos/real-estate/css/font-icons.css" type="text/css" />
+	<!-- / -->
+
+	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+	<link rel="stylesheet" href="css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+
+	<link rel="stylesheet" href="demos/real-estate/fonts.css" type="text/css" />
+
+	<!-- Bootstrap Select CSS -->
+	<link rel="stylesheet" href="css/components/bs-select.css" type="text/css" />
+
+	<!-- Bootstrap Switch CSS -->
+	<link rel="stylesheet" href="css/components/bs-switches.css" type="text/css" />
+
+	<!-- Range Slider CSS -->
+	<link rel="stylesheet" href="css/components/ion.rangeslider.css" type="text/css" />
+
+	<link rel="stylesheet" href="css/custom.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="css/colors.php?color=2C3E50" type="text/css" />
+
+	<!-- Document Title
+	============================================= -->
+	<title>Listing - Real Estate | Canvas</title>
+
+	<style>
+		label {font-family: 'Lora', sans-serif !important;}
+
+		.bootstrap-select.btn-group > .dropdown-toggle {
+			background-color: #dae0e5;
+			border-color: #d3d9df;
+		}
+
+		@media (min-width: 992px) {
+			.top-links-container > .top-links-item > a {
+				color: #333;
+			}
+
+			.top-links-container > .top-links-item.top-bar-highlight > a {
+				border: 1px solid #555;
+			}
+
+			.top-links-container > .top-links-item.top-bar-highlight:hover > a {
+				background-color: #FFF;
+				color: #222;
+			}
+
+			.menu-item:hover > .menu-link,
+			.menu-item.current > .menu-link {
+				color: #2C3E50;
+			}
+
+			.sub-menu-container,
+			.mega-menu-content { background-color: #2C3E50; }
+
+			.sub-menu-container .menu-item > .menu-link { color: #CCC !important; }
+
+			.sub-menu-container .menu-item:hover > .menu-link {
+				background-color: rgba(255,255,255,0.025);
+				color: #F0AD4E !important;
+				border-radius: 3px;
+			}
+		}
+	</style>
+
+</head>
+
+<body class="stretched side-push-panel">
+
+	<div id="side-panel">
+		<div id="side-panel-trigger-close" class="side-panel-trigger"><a href="#"><i class="icon-line-cross"></i></a></div>
+
+		<div class="side-panel-wrap">
+			<div class="widget clearfix">
+
+				<h4 class="fw-normal">Login with Social Profiles</h4>
+
+				<a href="#" class="button button-rounded fw-normal w-100 center si-colored ms-0 si-facebook">Facebook</a>
+				<a href="#" class="button button-rounded fw-normal w-100 center si-colored ms-0 si-gplus">Google</a>
+
+				<div class="line"></div>
+
+				<h4 class="fw-normal">Existing Account?</h4>
+
+				<form id="login-form" name="row mb-0" class="mb-0" action="#" method="post">
+
+					<div class="col-12 form-group">
+						<label for="login-form-username" class="fw-normal">Username:</label>
+						<input type="text" id="login-form-username" name="login-form-username" value="" class="form-control" />
+					</div>
+
+					<div class="col-12 form-group">
+						<label for="login-form-password" class="fw-normal">Password:</label>
+						<input type="password" id="login-form-password" name="login-form-password" value="" class="form-control" />
+					</div>
+
+					<div class="col-12 form-group">
+						<button class="button button-rounded fw-normal m-0" id="login-form-submit" name="login-form-submit" value="login">Login</button>
+						<a href="#" class="float-end">Forgot Password?</a>
+					</div>
+
+				</form>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="header-size-md" data-sticky-shrink="false">
+			<div id="header-wrap">
+				<div class="container-fluid px-4">
+					<div class="header-row">
+
+						<!-- Logo
+						============================================= -->
+						<div id="logo">
+							<a href="index.html" data-dark-logo="images/logo.png" class="standard-logo"><img src="images/logo.png" alt="Canvas Logo"></a>
+							<a href="index.html" data-dark-logo="images/logo@2x.png" class="retina-logo"><img src="images/logo@2x.png" alt="Canvas Logo"></a>
+						</div><!-- #logo end -->
+
+						<div id="primary-menu-trigger">
+							<svg class="svg-trigger" viewBox="0 0 100 100"><path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path><path d="m 30,50 h 40"></path><path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path></svg>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu with-arrows">
+
+							<ul class="menu-container">
+								<li class="menu-item current"><a class="menu-link" href="demo-real-estate.html"><div>Home</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="demo-real-estate-about-us.html"><div>About Us</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Properties</div></a>
+									<ul class="sub-menu-container">
+										<li class="menu-item"><a class="menu-link" href="demo-real-estate-single-property.html"><div>Condo Apartments</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="demo-real-estate-single-property.html"><div>Luxury Villas</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="demo-real-estate-single-property.html"><div>Premium Estates</div></a></li>
+									</ul>
+								</li>
+								<li class="menu-item"><a class="menu-link" href="demo-real-estate-builders.html"><div>Builders</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="demo-real-estate-services.html"><div>Services</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="demo-real-estate-listing.html"><div>Listing</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="demo-real-estate-contact.html"><div>Contact</div></a></li>
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap py-0">
+
+				<style>
+					.listings-area {
+						--cnvs-listings-area-offset: 81px;
+						height: calc(100vh - var(--cnvs-listings-area-offset));
+					}
+				</style>
+
+				<div class="section row g-0 top-0 bg-transparent m-0 p-0 listings-area overflow-hidden">
+
+					<div class="col-md-6 listings-area bg-light">
+						<div class="position-relative h-100 px-4" style="overflow-y: scroll;">
+							<div class="real-estate mt-5 grid-container row portfolio gutter-20 col-mb-50" data-layout="fitRows">
+
+								<div class="real-estate-item portfolio-item col-12">
+									<div class="real-estate-item-image">
+										<div class="label badge bg-danger bg-color2">For Sale</div>
+										<a href="#">
+											<img src="demos/real-estate/images/items/1.jpg" alt="Image 1" class="w-100">
+										</a>
+										<div class="real-estate-item-price">
+											$1.2m<span>Leasehold</span>
+										</div>
+										<div class="real-estate-item-info clearfix" data-lightbox="gallery">
+											<a href="demos/real-estate/images/items/1.jpg" data-bs-toggle="tooltip" title="Images" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
+											<a href="demos/real-estate/images/items/3.jpg" class="d-none" data-lightbox="gallery-item"></a>
+											<a href="#" data-bs-toggle="tooltip" title="Like"><i class="icon-line-heart"></i></a>
+										</div>
+									</div>
+
+									<div class="real-estate-item-desc p-0">
+										<h3><a href="#">3 Bedroom Villa</a></h3>
+										<span>Seminyak Area</span>
+
+										<a href="#" class="real-estate-item-link"><i class="icon-info"></i></a>
+
+										<div class="line" style="margin-top: 15px; margin-bottom: 15px;"></div>
+
+										<div class="real-estate-item-features row fw-medium font-primary px-3 clearfix">
+											<div class="col-lg-4 col-6 p-0">Beds: <span class="color">3</span></div>
+											<div class="col-lg-4 col-6 p-0">Baths: <span class="color">3</span></div>
+											<div class="col-lg-4 col-6 p-0">Area: <span class="color">150 sqm</span></div>
+											<div class="col-lg-4 col-6 p-0">Pool: <span class="text-success"><i class="icon-check-sign"></i></span></div>
+											<div class="col-lg-4 col-6 p-0">Internet: <span class="text-success"><i class="icon-check-sign"></i></span></div>
+											<div class="col-lg-4 col-6 p-0">Cleaning: <span class="text-danger"><i class="icon-minus-sign-alt"></i></span></div>
+										</div>
+									</div>
+								</div>
+
+								<div class="real-estate-item portfolio-item col-12">
+									<div class="real-estate-item-image">
+										<div class="label badge bg-success">Hot Deal</div>
+										<a href="#">
+											<img src="demos/real-estate/images/items/2.jpg" alt="Image 2" class="w-100">
+										</a>
+										<div class="real-estate-item-price">
+											$200,000<span>bi-annually</span>
+										</div>
+										<div class="real-estate-item-info clearfix" data-lightbox="gallery">
+											<a href="demos/real-estate/images/items/1.jpg" data-bs-toggle="tooltip" title="Images" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
+											<a href="demos/real-estate/images/items/3.jpg" class="d-none" data-lightbox="gallery-item"></a>
+											<a href="#" data-bs-toggle="tooltip" title="Like"><i class="icon-line-heart"></i></a>
+										</div>
+									</div>
+
+									<div class="real-estate-item-desc p-0">
+										<h3><a href="#">3 Bedroom Villa</a></h3>
+										<span>Seminyak Area</span>
+
+										<a href="#" class="real-estate-item-link"><i class="icon-info"></i></a>
+
+										<div class="line" style="margin-top: 15px; margin-bottom: 15px;"></div>
+
+										<div class="real-estate-item-features row fw-medium px-3 clearfix">
+											<div class="col-lg-4 col-6 p-0">Beds: <span class="color">3</span></div>
+											<div class="col-lg-4 col-6 p-0">Baths: <span class="color">3</span></div>
+											<div class="col-lg-4 col-6 p-0">Area: <span class="color">150 sqm</span></div>
+											<div class="col-lg-4 col-6 p-0">Pool: <span class="text-success"><i class="icon-check-sign"></i></span></div>
+											<div class="col-lg-4 col-6 p-0">Internet: <span class="text-success"><i class="icon-check-sign"></i></span></div>
+											<div class="col-lg-4 col-6 p-0">Cleaning: <span class="text-success"><i class="icon-check-sign"></i></span></div>
+										</div>
+									</div>
+								</div>
+
+								<div class="real-estate-item portfolio-item col-12">
+									<div class="real-estate-item-image">
+										<div class="label badge bg-danger">Sale</div>
+										<a href="#">
+											<img src="demos/real-estate/images/items/3.jpg" alt="Image 3" class="w-100">
+										</a>
+										<div class="real-estate-item-price">
+											$1600<span>per Sale</span>
+										</div>
+										<div class="real-estate-item-info clearfix" data-lightbox="gallery">
+											<a href="demos/real-estate/images/items/1.jpg" data-bs-toggle="tooltip" title="Images" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
+											<a href="demos/real-estate/images/items/3.jpg" class="d-none" data-lightbox="gallery-item"></a>
+											<a href="#" data-bs-toggle="tooltip" title="Like"><i class="icon-line-heart"></i></a>
+										</div>
+									</div>
+
+									<div class="real-estate-item-desc p-0">
+										<h3><a href="#">3 Bedroom Villa</a></h3>
+										<span>Seminyak Area</span>
+
+										<a href="#" class="real-estate-item-link"><i class="icon-info"></i></a>
+
+										<div class="line" style="margin-top: 15px; margin-bottom: 15px;"></div>
+
+										<div class="real-estate-item-features row fw-medium px-3 clearfix">
+											<div class="col-lg-4 col-6 p-0">Beds: <span class="color">3</span></div>
+											<div class="col-lg-4 col-6 p-0">Baths: <span class="color">3</span></div>
+											<div class="col-lg-4 col-6 p-0">Area: <span class="color">150 sqm</span></div>
+											<div class="col-lg-4 col-6 p-0">Pool: <span class="text-success"><i class="icon-check-sign"></i></span></div>
+											<div class="col-lg-4 col-6 p-0">Internet: <span class="text-success"><i class="icon-check-sign"></i></span></div>
+											<div class="col-lg-4 col-6 p-0">Cleaning: <span class="text-success"><i class="icon-check-sign"></i></span></div>
+										</div>
+									</div>
+								</div>
+
+								<div class="real-estate-item portfolio-item col-12">
+									<div class="real-estate-item-image">
+										<div class="label badge bg-danger">Long Term Rental</div>
+										<a href="#">
+											<img src="demos/real-estate/images/items/4.jpg" alt="Image 3" class="w-100">
+										</a>
+										<div class="real-estate-item-price">
+											$799<span>per month</span>
+										</div>
+										<div class="real-estate-item-info clearfix" data-lightbox="gallery">
+											<a href="demos/real-estate/images/items/1.jpg" data-bs-toggle="tooltip" title="Images" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
+											<a href="demos/real-estate/images/items/3.jpg" class="d-none" data-lightbox="gallery-item"></a>
+											<a href="#" data-bs-toggle="tooltip" title="Like"><i class="icon-line-heart"></i></a>
+										</div>
+									</div>
+
+									<div class="real-estate-item-desc p-0">
+										<h3><a href="#">2 Bedroom Appartment</a></h3>
+										<span>Ubud Area</span>
+
+										<a href="#" class="real-estate-item-link"><i class="icon-info"></i></a>
+
+										<div class="line" style="margin-top: 15px; margin-bottom: 15px;"></div>
+
+										<div class="real-estate-item-features row fw-medium px-3 clearfix">
+											<div class="col-lg-4 col-6 p-0">Beds: <span class="color">3</span></div>
+											<div class="col-lg-4 col-6 p-0">Baths: <span class="color">3</span></div>
+											<div class="col-lg-4 col-6 p-0">Area: <span class="color">150 sqm</span></div>
+											<div class="col-lg-4 col-6 p-0">Pool: <span class="text-success"><i class="icon-check-sign"></i></span></div>
+											<div class="col-lg-4 col-6 p-0">Internet: <span class="text-success"><i class="icon-check-sign"></i></span></div>
+											<div class="col-lg-4 col-6 p-0">Cleaning: <span class="text-success"><i class="icon-check-sign"></i></span></div>
+										</div>
+									</div>
+								</div>
+
+								<div class="real-estate-item portfolio-item col-12">
+									<div class="real-estate-item-image">
+										<div class="label badge bg-danger">Long Term Rental</div>
+										<a href="#">
+											<img src="demos/real-estate/images/items/5.jpg" alt="Image 3" class="w-100">
+										</a>
+										<div class="real-estate-item-price">
+											$1600<span>per month</span>
+										</div>
+										<div class="real-estate-item-info clearfix" data-lightbox="gallery">
+											<a href="demos/real-estate/images/items/1.jpg" data-bs-toggle="tooltip" title="Images" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
+											<a href="demos/real-estate/images/items/3.jpg" class="d-none" data-lightbox="gallery-item"></a>
+											<a href="#" data-bs-toggle="tooltip" title="Like"><i class="icon-line-heart"></i></a>
+										</div>
+									</div>
+
+									<div class="real-estate-item-desc p-0">
+										<h3><a href="#">4 Bedroom Villa</a></h3>
+										<span>Kutta Area</span>
+
+										<a href="#" class="real-estate-item-link"><i class="icon-info"></i></a>
+
+										<div class="line" style="margin-top: 15px; margin-bottom: 15px;"></div>
+
+										<div class="real-estate-item-features row fw-medium px-3 clearfix">
+											<div class="col-lg-4 col-6 p-0">Beds: <span class="color">3</span></div>
+											<div class="col-lg-4 col-6 p-0">Baths: <span class="color">3</span></div>
+											<div class="col-lg-4 col-6 p-0">Area: <span class="color">150 sqm</span></div>
+											<div class="col-lg-4 col-6 p-0">Pool: <span class="text-success"><i class="icon-check-sign"></i></span></div>
+											<div class="col-lg-4 col-6 p-0">Internet: <span class="text-success"><i class="icon-check-sign"></i></span></div>
+											<div class="col-lg-4 col-6 p-0">Cleaning: <span class="text-success"><i class="icon-check-sign"></i></span></div>
+										</div>
+									</div>
+								</div>
+
+								<div class="real-estate-item portfolio-item col-12">
+									<div class="real-estate-item-image">
+										<div class="label badge bg-danger">Day/Monthly Rental</div>
+										<a href="#">
+											<img src="demos/real-estate/images/items/6.jpg" alt="Image 3" class="w-100">
+										</a>
+										<div class="real-estate-item-price">
+											$99<span>per Day</span>
+										</div>
+										<div class="real-estate-item-info clearfix" data-lightbox="gallery">
+											<a href="demos/real-estate/images/items/1.jpg" data-bs-toggle="tooltip" title="Images" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
+											<a href="demos/real-estate/images/items/3.jpg" class="d-none" data-lightbox="gallery-item"></a>
+											<a href="#" data-bs-toggle="tooltip" title="Like"><i class="icon-line-heart"></i></a>
+										</div>
+									</div>
+
+									<div class="real-estate-item-desc p-0">
+										<h3><a href="#">3 Bedroom Villa</a></h3>
+										<span>Seminyak Area</span>
+
+										<a href="#" class="real-estate-item-link"><i class="icon-info"></i></a>
+
+										<div class="line" style="margin-top: 15px; margin-bottom: 15px;"></div>
+
+										<div class="real-estate-item-features row fw-medium px-3 clearfix">
+											<div class="col-lg-4 col-6 p-0">Beds: <span class="color">3</span></div>
+											<div class="col-lg-4 col-6 p-0">Baths: <span class="color">3</span></div>
+											<div class="col-lg-4 col-6 p-0">Area: <span class="color">150 sqm</span></div>
+											<div class="col-lg-4 col-6 p-0">Pool: <span class="text-success"><i class="icon-check-sign"></i></span></div>
+											<div class="col-lg-4 col-6 p-0">Internet: <span class="text-success"><i class="icon-check-sign"></i></span></div>
+											<div class="col-lg-4 col-6 p-0">Cleaning: <span class="text-success"><i class="icon-check-sign"></i></span></div>
+										</div>
+									</div>
+								</div>
+
+								<div class="real-estate-item portfolio-item col-12">
+									<div class="real-estate-item-image">
+										<div class="label badge bg-danger">Monthly Rental</div>
+										<a href="#">
+											<img src="demos/real-estate/images/items/7.jpg" alt="Image 3" class="w-100">
+										</a>
+										<div class="real-estate-item-price">
+											$1600<span>per month</span>
+										</div>
+										<div class="real-estate-item-info clearfix" data-lightbox="gallery">
+											<a href="demos/real-estate/images/items/1.jpg" data-bs-toggle="tooltip" title="Images" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
+											<a href="demos/real-estate/images/items/3.jpg" class="d-none" data-lightbox="gallery-item"></a>
+											<a href="#" data-bs-toggle="tooltip" title="Like"><i class="icon-line-heart"></i></a>
+										</div>
+									</div>
+
+									<div class="real-estate-item-desc p-0">
+										<h3><a href="#">5 Bedroom Villa</a></h3>
+										<span>Seminyak Area</span>
+
+										<a href="#" class="real-estate-item-link"><i class="icon-info"></i></a>
+
+										<div class="line" style="margin-top: 15px; margin-bottom: 15px;"></div>
+
+										<div class="real-estate-item-features row fw-medium px-3 clearfix">
+											<div class="col-lg-4 col-6 p-0">Beds: <span class="color">3</span></div>
+											<div class="col-lg-4 col-6 p-0">Baths: <span class="color">3</span></div>
+											<div class="col-lg-4 col-6 p-0">Area: <span class="color">150 sqm</span></div>
+											<div class="col-lg-4 col-6 p-0">Pool: <span class="text-success"><i class="icon-check-sign"></i></span></div>
+											<div class="col-lg-4 col-6 p-0">Internet: <span class="text-success"><i class="icon-check-sign"></i></span></div>
+											<div class="col-lg-4 col-6 p-0">Cleaning: <span class="text-success"><i class="icon-check-sign"></i></span></div>
+										</div>
+									</div>
+								</div>
+
+								<div class="real-estate-item portfolio-item col-12">
+									<div class="real-estate-item-image">
+										<div class="label badge bg-danger">Long Term Rental</div>
+										<a href="#">
+											<img src="demos/real-estate/images/items/8.jpg" alt="Image 3" class="w-100">
+										</a>
+										<div class="real-estate-item-price">
+											$1199<span>per month</span>
+										</div>
+										<div class="real-estate-item-info clearfix" data-lightbox="gallery">
+											<a href="demos/real-estate/images/items/1.jpg" data-bs-toggle="tooltip" title="Images" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
+											<a href="demos/real-estate/images/items/3.jpg" class="d-none" data-lightbox="gallery-item"></a>
+											<a href="#" data-bs-toggle="tooltip" title="Like"><i class="icon-line-heart"></i></a>
+										</div>
+									</div>
+
+									<div class="real-estate-item-desc p-0">
+										<h3><a href="#">Corporate Office</a></h3>
+										<span>Legian Area</span>
+
+										<a href="#" class="real-estate-item-link"><i class="icon-info"></i></a>
+
+										<div class="line" style="margin-top: 15px; margin-bottom: 15px;"></div>
+
+										<div class="real-estate-item-features row fw-medium px-3 clearfix">
+											<div class="col-lg-4 col-6 p-0">Beds: <span class="color">3</span></div>
+											<div class="col-lg-4 col-6 p-0">Baths: <span class="color">3</span></div>
+											<div class="col-lg-4 col-6 p-0">Area: <span class="color">150 sqm</span></div>
+											<div class="col-lg-4 col-6 p-0">Pool: <span class="text-success"><i class="icon-check-sign"></i></span></div>
+											<div class="col-lg-4 col-6 p-0">Internet: <span class="text-success"><i class="icon-check-sign"></i></span></div>
+											<div class="col-lg-4 col-6 p-0">Cleaning: <span class="text-success"><i class="icon-check-sign"></i></span></div>
+										</div>
+									</div>
+								</div>
+
+								<div class="real-estate-item portfolio-item col-12">
+									<div class="real-estate-item-image">
+										<div class="label badge bg-danger">Coworking Space</div>
+										<a href="#">
+											<img src="demos/real-estate/images/items/9.jpg" alt="Image 3" class="w-100">
+										</a>
+										<div class="real-estate-item-price">
+											$99<span>per Week</span>
+										</div>
+										<div class="real-estate-item-info clearfix" data-lightbox="gallery">
+											<a href="demos/real-estate/images/items/1.jpg" data-bs-toggle="tooltip" title="Images" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
+											<a href="demos/real-estate/images/items/3.jpg" class="d-none" data-lightbox="gallery-item"></a>
+											<a href="#" data-bs-toggle="tooltip" title="Like"><i class="icon-line-heart"></i></a>
+										</div>
+									</div>
+
+									<div class="real-estate-item-desc p-0">
+										<h3><a href="#">Coworking Office</a></h3>
+										<span>Ubud Area</span>
+
+										<a href="#" class="real-estate-item-link"><i class="icon-info"></i></a>
+
+										<div class="line" style="margin-top: 15px; margin-bottom: 15px;"></div>
+
+										<div class="real-estate-item-features row fw-medium px-3 clearfix">
+											<div class="col-lg-4 col-6 p-0">Beds: <span class="color">3</span></div>
+											<div class="col-lg-4 col-6 p-0">Baths: <span class="color">3</span></div>
+											<div class="col-lg-4 col-6 p-0">Area: <span class="color">150 sqm</span></div>
+											<div class="col-lg-4 col-6 p-0">Pool: <span class="text-success"><i class="icon-check-sign"></i></span></div>
+											<div class="col-lg-4 col-6 p-0">Internet: <span class="text-success"><i class="icon-check-sign"></i></span></div>
+											<div class="col-lg-4 col-6 p-0">Cleaning: <span class="text-success"><i class="icon-check-sign"></i></span></div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div row>
+					</div>
+
+					<div class="col-md-6 bg-light listings-area">
+						<div class="gmap h-100" data-address="Melbourne, Australia" data-maptype="ROADMAP" data-zoom="14" data-markers='[{ address: "Melbourne, Australia", html: "Melbourne, Australia", icon:{ image: "one-page/images/icons/map-icon-red.png", iconsize: [32, 32], iconanchor: [14,44] } }]' data-styles='[{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"administrative","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"administrative.country","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"administrative.country","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"administrative.country","elementType":"labels.text","stylers":[{"visibility":"simplified"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.locality","elementType":"all","stylers":[{"visibility":"simplified"},{"saturation":"-100"},{"lightness":"30"}]},{"featureType":"administrative.neighborhood","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.land_parcel","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"visibility":"simplified"},{"gamma":"0.00"},{"lightness":"74"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"lightness":"3"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]'></div>
+					</div>
+				</div>
+			</div><!-- .content-wrap end -->
+		</section><!-- #content end -->
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="dark">
+			<div class="container">
+				<!-- Footer Widgets
+				============================================= -->
+				<div class="footer-widgets-wrap">
+
+					<div class="row col-mb-50">
+						<div class="col-lg-5 order-last order-lg-first">
+
+							<div class="widget clearfix">
+
+								<img src="demos/real-estate/images/logo@2x.png" style="position: relative; opacity: 0.85; left: -10px; max-height: 80px; margin-bottom: 20px;" alt="Footer Logo">
+
+								<p>We believe in <strong>Simple</strong>, <strong>Creative</strong> &amp; <strong>Flexible</strong> Design Standards with a Retina &amp; Responsive Approach. Browse the amazing Features this template offers.</p>
+
+								<div class="line" style="margin: 30px 0;"></div>
+
+								<p class="ls1 fw-light" style="opacity: 0.6; font-size: 13px;">Copyrights &copy; 2020 Canvas: Real Estate</p>
+
+							</div>
+
+						</div>
+
+						<div class="col-lg-7">
+
+							<div class="row col-mb-50">
+								<div class="col-md-6">
+									<h4 class="ls1 fw-normal text-uppercase">Popular Locations</h4>
+
+									<div class="row">
+										<div class="col-6 bottommargin-sm widget_links widget_real_estate_popular">
+											<ul>
+												<li><a href="#">California</a></li>
+												<li><a href="#">Nevada</a></li>
+												<li><a href="#">Hawaii</a></li>
+												<li><a href="#">Washington</a></li>
+												<li><a href="#">Ottawa</a></li>
+												<li><a href="#">Virginia</a></li>
+												<li><a href="#">Ohio</a></li>
+											</ul>
+										</div>
+
+										<div class="col-6 bottommargin-sm widget_links widget_real_estate_popular">
+											<ul>
+												<li><a href="#">Oregon</a></li>
+												<li><a href="#">Colorado</a></li>
+												<li><a href="#">Kentucky</a></li>
+												<li><a href="#">Texas</a></li>
+												<li><a href="#">Miami</a></li>
+												<li><a href="#">New York</a></li>
+												<li><a href="#">New Jersey</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6">
+									<h4 class="ls1 fw-normal text-uppercase">Connect Socially</h4>
+
+									<div class="bottommargin-sm clearfix">
+										<a href="#" class="social-icon si-colored si-small si-rounded si-facebook" title="Facebook">
+											<i class="icon-facebook"></i>
+											<i class="icon-facebook"></i>
+										</a>
+
+										<a href="#" class="social-icon si-colored si-small si-rounded si-twitter" title="Twitter">
+											<i class="icon-twitter"></i>
+											<i class="icon-twitter"></i>
+										</a>
+
+										<a href="#" class="social-icon si-colored si-small si-rounded si-instagram" title="Instagram">
+											<i class="icon-instagram"></i>
+											<i class="icon-instagram"></i>
+										</a>
+
+										<a href="#" class="social-icon si-colored si-small si-rounded si-apple" title="App Store">
+											<i class="icon-apple"></i>
+											<i class="icon-apple"></i>
+										</a>
+
+										<a href="#" class="social-icon si-colored si-small si-rounded si-android" title="Play Store">
+											<i class="icon-android"></i>
+											<i class="icon-android"></i>
+										</a>
+
+										<a href="#" class="social-icon si-colored si-small si-rounded si-skype" title="Skype">
+											<i class="icon-skype"></i>
+											<i class="icon-skype"></i>
+										</a>
+									</div>
+
+									<div class="widget subscribe-widget subscribe-form clearfix" data-loader="button">
+										<div class="widget-subscribe-form-result"></div>
+										<form action="include/subscribe.php" method="post" class="mb-0">
+											<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="sm-form-control not-dark required email" placeholder="Enter your Email">
+											<button class="button button-3d button-black mx-0" style="margin-top: 15px;" type="submit">Subscribe</button>
+										</form>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div><!-- .footer-widgets-wrap end -->
+			</div>
+		</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
+	<script src="https://maps.google.com/maps/api/js?key=YOUR-API-KEY"></script>
+
+	<!-- Bootstrap Select Plugin -->
+	<script src="js/components/bs-select.js"></script>
+
+	<!-- Bootstrap Switch Plugin -->
+	<script src="js/components/bs-switches.js"></script>
+
+	<!-- Range Slider Plugin -->
+	<script src="js/components/rangeslider.min.js"></script>
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script src="js/functions.js"></script>
+
+	<script>
+
+		jQuery(document).ready(function(){
+
+			$(".price-range-slider").ionRangeSlider({
+				type: "double",
+				prefix: "$",
+				min: 200,
+				max: 10000,
+				max_postfix: "+"
+			});
+
+			$(".area-range-slider").ionRangeSlider({
+				type: "double",
+				min: 50,
+				max: 20000,
+				from: 50,
+				to: 20000,
+				postfix: " sqm.",
+				max_postfix: "+"
+			});
+
+			jQuery(".bt-switch").bootstrapSwitch();
+
+			jQuery('.more-search').click(function(){
+				jQuery('.expand-link').slideToggle(400);
+			});
+
+		});
+
+
+	</script>
+
+</body>
+</html>
