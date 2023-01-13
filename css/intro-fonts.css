@@ -5,6 +5,7 @@
 -----------------------------------------------------------------*/
 
 
+
 body,
 small,
 .sub-menu-container .menu-item > .menu-link,
@@ -12,9 +13,7 @@ small,
 .fbox-center.fbox-italic p,
 .skills li .progress-percent .counter,
 .nav-tree ul ul a,
-.font-body { font-family: 'Lato', sans-serif !important; }
-
-
+.font-body,
 h1,
 h2,
 h3,
@@ -50,4 +49,3 @@ label,
 .wedding-head .first-name span,
 .wedding-head .last-name span,
 .font-secondary { font-family: 'PT Serif', serif !important; }
-
