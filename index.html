@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SCP Central</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Add a dark background color with a little bit see-through */ 
+    .navbar {
+      margin-bottom: 0;
+      background-color: #2d2d30;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity:0.9;
+    }
+    /* Add a gray color to all navbar links */
+    .navbar li a, .navbar .navbar-brand { 
+      color: #d5d5d5 !important;
+    }
+    /* On hover, the links will turn white */
+    .navbar-nav li a:hover {
+      color: #fff !important;
+    }
+    /* The active link */
+    .navbar-nav li.active a {
+      color: #fff !important;
+      background-color:#29292c !important;
+    }
+    /* Remove border color from the collapsible button */
+    .navbar-default .navbar-toggle {
+      border-color: transparent;
+    }
+    /* Dropdown */
+    .open .dropdown-toggle {
+      color: #fff ;
+      background-color: #555 !important;
+    }
+    /* Dropdown links */
+    .dropdown-menu li a {
+      color: #000 !important;
+    }
+    /* On hover, the dropdown links will turn red */
+    .dropdown-menu li a:hover {
+      background-color: red !important;
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">SCP Central</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#SCPs">SCPS</a></li>
+        <li class="dropdown">
+          <aclass="dropdown-toggle" data-toggle="dropdown" href="#">CATEGORIES
+<span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li><a href="#Safe">Safe</a></li>
+<li><a href="#Euclid">Euclid</a></li>
+<li><a href="#Keter">Keter</a></li>
+</ul>
+</li>
+<li><a href="#contact">CONTACT</a></li>
+</ul>
+</div>
+
+  </div>
+</nav>
+<div class="jumbotron text-center">
+  <h1>SCP Central</h1>
+  <p>Making it easy to find and learn about SCPs</p>
+</div>
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About SCP Central</h2>
+      <h4>SCP Central is a website dedicated to providing information and resources on the SCP Foundation and its contained entities, known as SCPs.</h4>
+      <p>Our goal is to make it easy for people to learn about and find information on these mysterious and intriguing entities. Our site features a comprehensive database of SCPs, categorized by object class for easy navigation. Whether you're a fan of the SCP Foundation or simply curious about these strange and fascinating entities, SCP Central is the place for you.</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-education logo"></span>
+    </div>
+  </div>
+</div>
+<!-- Container (SCPs Section) -->
+<div id="SCPs" class="container-fluid bg-grey">
+  <h2 class="text-center">SCPs</h2>
+  <div class="row text-center">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://static.wikia.nocookie.net/scpcb_gamepedia/images/9/9d/SCP-173.png/revision/latest?cb=20150525044150" alt="SCP-173" style="width: 10%; height: auto;">
+        <p><strong>SCP-173</strong></p>
+        <p>The Sculpture</p> 
+        <button class="btn" onclick="window.location.href='scp-173.html'">Learn More</button>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://static.wikia.nocookie.net/characterprofile/images/9/9e/Untitled_drawing_-_2021-11-25T125408.935.png/revision/latest?cb=20211125205425" alt="SCP-682" style="width: 50%; height: auto;">
+        <p><strong>SCP-682</strong></p>
+        <p>The Hard to Destroy Reptile</p>
+        <button class="btn" onclick="window.location.href='scp-682.html'">Learn More</button>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://static.wikia.nocookie.net/p__/images/d/d7/SCPadorable.png/revision/latest?cb=20170515135529&path-prefix=protagonist" alt="SCP-999" style="width: 50%; height: auto;">
+        <p><strong>SCP-999</strong></p>
+        <p>The Tickle Monster</p>
+        <button class="btn" onclick="window.location.href='scp-999.html'">Learn More</button>
+        </div>
+    </div>
+    </div>
+    <div class="row text-center">
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+    <h2 class="text-center">CONTACT</h2>
+    <div class="row">
+      <div class="col-sm-5">
+        <p>Contact us and we'll get back to you within 24 hours.</p>
+        <p><span class="glyphicon glyphicon-map-marker"></span> SCP Central HQ</p>
+        <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+        <p><span class="glyphicon glyphicon-envelope"></span> scpfoundationweb@gmail.com
+        </p>
+      </div>
+
+      </div>
+    </div>
+  </div>
+  <footer class="container-fluid text-center">
+    <a href="#myPage" title="To Top">
+      <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+    <p>SCP Central - 2023</p>
+  </footer>
+  </body>
+  </html>
