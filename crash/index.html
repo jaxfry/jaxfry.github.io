@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<h2>Crashing Now</h2>
+
+
+<p>Hit Ok To Crash</p>
+
+
+<p id="demo"></p>
+
+
+<script>
+onbeforeunload = function(){localStorage.x=1};
+
+
+if(confirm("Do you REALLY want me to crash your browser?")){
+  setTimeout(function(){
+    while(1)location.reload(1)
+  }, 1000)
+}
+</script>
+
+
+</body>
+</html>
