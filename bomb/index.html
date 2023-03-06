@@ -23,7 +23,7 @@
   <script>
     function startCountdown() {
       var countdownElement = document.getElementById("countdown");
-      var secondsLeft = 60;
+      var secondsLeft = 30;
       var countdownInterval = setInterval(function() {
         secondsLeft--;
         countdownElement.textContent = secondsLeft + "s";
@@ -36,5 +36,13 @@
         }
       }, 1000);
     }
+    // create an Audio object for the ticking sound
+var tickingSound = new Audio('sound.mp3');
+
+// play the ticking sound every second
+setInterval(function() {
+  tickingSound.play();
+}, 1000);
+
   </script>
   
