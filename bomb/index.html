@@ -21,7 +21,9 @@
   
   <!-- Add this script to run the countdown timer and the JavaScript code when it ends -->
   <script>
+    var tickingSound = new Audio('sound.mp3');
     function startCountdown() {
+    tickingSound.play();
       var countdownElement = document.getElementById("countdown");
       var secondsLeft = 65;
       var countdownInterval = setInterval(function() {
@@ -37,12 +39,7 @@
       }, 1000);
     }
     // create an Audio object for the ticking sound
-var tickingSound = new Audio('sound.mp3');
 
-// play the ticking sound every second
-setInterval(function() {
-  tickingSound.play();
-}, 1000);
 
   </script>
   
