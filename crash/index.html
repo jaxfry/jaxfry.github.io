@@ -117,6 +117,19 @@ var width = Math.floor(Math.random() * 200) + 100;
 				y = Math.floor(Math.random() * (window.innerHeight - height));
 				win.moveTo(x, y);
 			}, 200);
+      function crashAfterCat() {
+        setTimeout(function(){
+    while(1)location.reload(1)
+  }, 1000)
+      }
+      var catCrash = 1;
+  setTimeout(function(){
+  catCrash + 1;
+  }, 217000)
+  
+  if(catCrash == 2){
+    crashAfterCat();
+  }
 
 }
 
