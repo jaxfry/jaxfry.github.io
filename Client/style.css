@@ -1,0 +1,263 @@
+/* General Styles */
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f6f6f6;
+  }
+  
+  header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  nav a {
+    color: #222;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  nav a:hover {
+    color: #fff;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+  
+  h2 {
+    font-size: 28px;
+    margin-top: 0;
+  }
+  
+  p {
+    margin-top: 0;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #222;
+  }
+  
+  button {
+    background-color: #222;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #444;
+  }
+  
+  
+  /* Specific Styles */
+  
+  /* Downloads Section */
+  
+  #downloads {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 40px;
+    margin-bottom: 40px;
+  }
+  
+  #downloads h2 {
+    font-size: 36px;
+    color: #222;
+    margin-bottom: 20px;
+  }
+  
+  #downloads p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  #downloads ul {
+    margin-bottom: 20px;
+  }
+  
+  #downloads li a {
+    font-size: 24px;
+    color: #222;
+  }
+  
+  #downloads li p {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  #downloads li ol {
+    margin-left: 20px;
+  }
+  
+  /* Features Section */
+  
+  #features {
+    background-color: #f6f6f6;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 40px;
+    margin-bottom: 40px;
+  }
+  
+  #features h2 {
+    font-size: 36px;
+    color: #222;
+    margin-bottom: 20px;
+  }
+  
+  #features p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  #features ul {
+    margin-bottom: 20px;
+  }
+  
+  #features li {
+    font-size: 24px;
+    color: #222;
+    margin-bottom: 10px;
+  }
+  
+  /* Contact Section */
+  
+  #contact {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 40px;
+  }
+  
+  #contact h2 {
+    font-size: 36px;
+    color: #222;
+    margin-bottom: 20px;
+  }
+  
+  #contact p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+#contact form {
+    margin-top: 20px;
+    }
+    
+    #contact label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    }
+    
+    #contact input[type="text"],
+    #contact input[type="email"],
+    #contact textarea {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-bottom: 20px;
+    }
+    
+    #contact textarea {
+    height: 200px;
+    }
+    
+    #contact button[type="submit"] {
+    background-color: #222;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+    
+    #contact button[type="submit"]:hover {
+    background-color: #444;
+    }
+    
+    @media (max-width: 768px) {
+    nav li {
+    display: block;
+    margin: 0 0 10px 0;
+    }
+    
+    #downloads, #features, #contact {
+    padding: 20px;
+    }
+    
+    #downloads h2, #features h2, #contact h2 {
+    font-size: 24px;
+    }
+    
+    #downloads li a {
+    font-size: 20px;
+    }
+    
+    #features li {
+    font-size: 20px;
+    }
+    
+    #contact input[type="text"],
+    #contact input[type="email"],
+    #contact textarea {
+    font-size: 16px;
+    padding: 8px;
+    }
+    
+    #contact textarea {
+    height: 150px;
+    }
+    }  
+
+    #downloads {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 40px;
+    margin-bottom: 40px;
+    }
