@@ -1,205 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Jaxfry's Website</title>
-    <style>
-        /* Basic styles for body and headings */
-        body {
-          font-family: sans-serif;
-          margin: 0;
-          padding: 0;
-        }
-        h1 {
-          font-size: 3rem;
-          text-align: center;
-          margin-top: 2rem;
-        }
-        /* Styles for links */
-        a {
-          text-decoration: none;
-          color: #002D62;
-          transition: all 0.3s ease;
-        }
-        a:hover {
-          color: #FFC72C;
-        }
-        /* Styles for the project section */
-        .project {
-          background-color: #FFC72C;
-          padding: 2rem;
-          margin: 3rem auto;
-          max-width: 50rem;
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-          border-radius: 1rem;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-        .project h2 {
-          font-size: 2.5rem;
-          margin-top: 0;
-        }
-        .project p {
-          font-size: 1.2rem;
-          margin-bottom: 0;
-        }
-        .project a {
-          margin-top: 1.5rem;
-          padding: 1rem 2rem;
-          background-color: #002D62;
-          color: white;
-          border-radius: 1rem;
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-        }
-        .project a:hover {
-          background-color: #FFC72C;
-          color: #002D62;
-          border-color: #002D62;
-        }
-        /* Styles for the SCP section */
-        .scp {
-          background-color: #002D62;
-          padding: 2rem;
-          margin: 3rem auto;
-          max-width: 50rem;
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-          border-radius: 1rem;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-        .scp h2 {
-          font-size: 2.5rem;
-          margin-top: 0;
-          color: white;
-        }
-        .scp p {
-          font-size: 1.2rem;
-          margin-bottom: 0;
-          color: white;
-        }
-        .scp a {
-          margin-top: 1.5rem;
-          padding: 1rem 2rem;
-          background-color: #FFC72C;
-          color: #002D62;
-          border-radius: 1rem;
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-        }
-        .scp a:hover {
-          background-color: #002D62;
-          color: #FFC72C;
-          border-color: #FFC72C;
-        }
-        /* Styles for the Client */
-        .client {
-          background-color: #d94444;
-          padding: 2rem;
-          margin: 3rem auto;
-          max-width: 50rem;
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-          border-radius: 1rem;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-        .client h2 {
-          font-size: 2.5rem;
-          margin-top: 0;
-          color: white;
-        }
-        .client p {
-          font-size: 1.2rem;
-          margin-bottom: 0;
-          color: white;
-        }
-        .client a {
-          margin-top: 1.5rem;
-          padding: 1rem 2rem;
-          background-color: #FFC72C;
-          color: #002D62;
-          border-radius: 1rem;
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-        }
-        .client a:hover {
-          background-color: #002D62;
-          color: #FFC72C;
-          border-color: #FFC72C;
-        }
-        /* Styles for the Squid Girl Day */
-        .squid-day {
-          background-color: #2710bb;
-          padding: 2rem;
-          margin: 3rem auto;
-          max-width: 50rem;
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-          border-radius: 1rem;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-        .squid-day h2 {
-          font-size: 2.5rem;
-          margin-top: 0;
-          color: white;
-        }
-        .squid-day p {
-          font-size: 1.2rem;
-          margin-bottom: 0;
-          color: white;
-        }
-        .squid-day a {
-          margin-top: 1.5rem;
-          padding: 1rem 2rem;
-          background-color: #FFC72C;
-          color: #002D62;
-          border-radius: 1rem;
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-        }
-        .squid-day a:hover {
-          background-color: #002D62;
-          color: #FFC72C;
-          border-color: #FFC72C;
-        }
-      </style>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="https://jaxfry.me/crash">Crash</a></li>
-          <li><a href="https://jaxfry.me/scp">SCP Database</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section class="project">
-        <h2>Crash</h2>
-        <p>Check out my website that crashes your browser.</p>
-        <a href="https://jaxfry.me/crash">Learn more</a>
-      </section>
-      <section class="scp">
-        <h2>SCP Database</h2>
-        <p>SCP database. (unfinished)</p>
-        <a href="https://jaxfry.me/scp">Read more</a>
-      </section>
+<html>
 
-      <section class="client">
-        <h2>JaxClient</h2>
-        <p>Check out my hacked client named JaxClient.</p>
-        <a href="https://jaxfry.me/client">Learn more</a>
-      </section>
-      <section class="squid-day">
-        <h2>Squid Girl Day!</h2>
-        <p>Squid Girl day is on Nov. 1st!.</p>
-        <a href="https://jaxfry.me/squid-day">Learn more</a>
-      </section>
-      <img src="http://gg.gg/1388le" alt="squidimg" style="width: 50%; height: auto;">
-      
-      <h2>Why their is an IP logger on my website?</h2>
-      <p>Because I want to know when someone visits my website and I am too lazy to set up google analytics. Don't wory, I am not doxing you.</p>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Jaxfry</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/pikaday.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
+        <div class="container"><a class="navbar-brand logo" href="#">Jaxfry</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarNav"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a><a class="nav-link" href="projects-no-images.html">Projects</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page lanidng-page">
+        <section class="portfolio-block block-intro" style="margin-top: -5px;margin-bottom: -48px;">
+            <div class="container">
+                <div class="about-me">
+                    <p>Hello! I am <strong>Jaxon </strong>aka Jaxfry.</p>
+                    <p>👋 Hi, I’m @jaxfry<br>👀 I’m interested in coding<br>🌱 I have basic&nbsp;<br>📫 How to reach me? Please email me at jaxfry999@gmail.com<br>Discord? Yes I have a discord please DM me here: Jaxfry#9885</p>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio-block skills" style="padding-bottom: 0px;margin-top: -127px;"></section>
     </main>
-  </body>
+    <section class="portfolio-block website gradient">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-12 col-lg-5 col-xxl-8 offset-lg-1 text" style="padding-right: 144px;">
+                    <h3><strong>This is my website!</strong></h3>
+                    <p style="margin-right: -160px;">Jaxfry.me is my website! Here you can see some projects or anything I want to put here!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="links"><a href="#">About me</a><a href="#">Projects</a></div>
+            <div class="social-icons"><a href="https://github.com/jaxfry"><i class="icon ion-social-github"></i></a></div>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/pikaday.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+
 </html>
