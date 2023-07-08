@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JaxTalk</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="navbar__container">
+                <a href="/" id="navbar__logo">JaxTalk</a>
+                <div class="navbar__toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="navbar__menu">
+                    <li class="navbar__item">
+                        <a href="/" class="navbar__links">
+                            Home
+                        </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="posts.html" class="navbar__links">
+                            Posts
+                        </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="details.html" class="navbar__links">
+                            Details
+                        </a>
+                    </li>
+                    <li class="navbar__btn">
+                        <a href="/" class="button">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="search-box">
+            <div>
+                <select name="" id="">
+                    <option value="everything">Everything</option>
+                    <option value="titles">Tiltes</option>
+                    <option value="descriptions">Descriptions</option>
+                </select>
+                <input type="text" name="q" id="" placeholder="Search ...">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div class="container">
+        <!-- Navigation -->
+        <div class="navigate">
+            <span><a href="#">JaxTalk - Forums</a> >> <a href="#">Random Topic</a></span>
+        </div>
+
+        <div class="topic-container">
+            <div class="head">
+                <div class="authors">Author</div>
+                <div class="content">Topic: Posts title (This Post Has Been Read 133 Times!)</div>
+            </div>
+
+            <div class="body">
+                <div class="authors">
+                    <div><a href="#" class="username">Username</a></div>
+                    <div>Role</div>
+                    <img src="https://cdn.pixabay.com/photo/2017/12/31/15/56/portrait-3052641_1280.jpg" alt="">
+                    <div>Posts: <u>45</u></div>
+                    <div>Points: <u>5472</u></div>
+                </div>
+
+                <div class="content">
+                    Just a random post to test the design of the forum. <br>
+                    <br> <br>
+                    Thats kinda it. <br>
+                    I guess. <br>
+                    I appreciate you reading this! Thanks! <br>
+                    <br>
+                    <hr>
+                    Bye!
+                    <div>
+                        <button class="cmbtn" onclick="showComment()">Comment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comment input -->
+        <div class="comment-area hide">
+            <textarea name="comment" id="" placeholder="Comment Here..."></textarea>
+            <input type="submit" name="" id="" value="submit">
+            <button class="close" onclick="hideComment()">Close Comment</button>
+        </div>
+    </div>
+
+
+
+    <div class="forum-info">
+        <div>
+            JaxTalk - Stats &nbsp;<i class="fa fa-bar-chart"></i>
+        </div>
+        <div>
+            <span><u>8,372</u> Posts in <u>3,489</u> Topics by <u>83,372</u> Users of which <u>61,437</u> are online.</span> <br>
+            <span>Latest Post: <b><a href="#">Random Post</a></b> on Jul 8 2023 by <a href="#">RandomGuy121</a></span>
+        </div>
+        
+    </div>
+
+
+
+    <footer>
+        <span class="center">&copy; &nbsp;JaxTalk | All rights Reserved.</span>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
