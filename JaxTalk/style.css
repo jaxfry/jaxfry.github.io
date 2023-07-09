@@ -543,7 +543,7 @@ h1 {
 /* Comment */
 
 .comment-area {
-    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .comment-area textarea {
@@ -566,4 +566,14 @@ h1 {
 
 .comment-area input:hover {
     border: solid 1px #000000;
+}
+
+.comments-container {
+    margin-top: 50px;
+}
+.comment-note {
+    background-color: #111314;
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
 }

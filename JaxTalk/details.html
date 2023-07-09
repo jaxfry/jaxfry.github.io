@@ -97,10 +97,42 @@
         </div>
 
         <!-- Comment input -->
-        <div class="comment-area hide">
+        <div class="comment-area hide" id="comment-area">
             <textarea name="comment" id="" placeholder="Comment Here..."></textarea>
             <input type="submit" name="" id="" value="submit">
-            <button class="close" onclick="hideComment()">Close Comment</button>
+        </div>
+
+
+        <!-- Comments -->
+        <div class="comments-container">
+            <div class="comment-note"><h2 class="center">COMMENTS</h2></div>
+            <div class="head">
+                <div class="authors">Author</div>
+                <div class="content">Comments</div>
+            </div>
+
+            <div class="body">
+                <div class="authors">
+                    <div><a href="#" class="AnotherUser">Username</a></div>
+                    <div>Role</div>
+                    <img src="https://cdn.pixabay.com/photo/2017/12/31/15/56/portrait-3052641_1280.jpg" alt="">
+                    <div>Posts: <u>45</u></div>
+                    <div>Points: <u>5472</u></div>
+                </div>
+
+                <div class="content">
+                    Just a random comment to test the design of the forum. <br>
+                    <div>
+                        <button class="cmbtn" onclick="showReply()">Reply</button>
+                    </div>
+                </div>
+
+                <!-- Reply input -->
+                <div class="comment-area hide" id="reply-area">
+                    <textarea name="comment" id="" placeholder="Reply here..."></textarea>
+                    <input type="submit" name="" id="" value="submit">
+                </div>
+            </div>
         </div>
     </div>
 
