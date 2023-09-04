@@ -3,26 +3,37 @@ function toggleDark() {
     document.body.classList.toggle('dark-mode');
 }
 
-// Apply dark mode by default when the page loads
 document.addEventListener('DOMContentLoaded', function() {
     const darkModeToggle = document.getElementById('dark-mode-toggle');
-    darkModeToggle.addEventListener('change', function() {
-        toggleDark();
-    });
-
-    // Check the initial state of dark mode
-    if (localStorage.getItem('darkMode') === 'enabled') {
+    
+    // Check the initial state of dark mode in localStorage
+    const darkModeState = localStorage.getItem('darkMode');
+    
+    if (darkModeState === 'enabled') {
+        // If dark mode is enabled in localStorage, enable it by default
         darkModeToggle.checked = true;
         toggleDark();
+    } else if (darkModeState === 'disabled') {
+        // If dark mode is disabled in localStorage, ensure it's unchecked
+        darkModeToggle.checked = false;
+    } else {
+        // If dark mode state is not set in localStorage, you can choose to enable it by default
+        // Here, we enable it by default if no state is found in localStorage
+        darkModeToggle.checked = true;
+        toggleDark();
+        localStorage.setItem('darkMode', 'enabled');
     }
-    
-    // Toggle dark mode when the slider changes
+
+    // Add an event listener to the dark mode toggle switch
     darkModeToggle.addEventListener('change', function() {
         if (darkModeToggle.checked) {
             localStorage.setItem('darkMode', 'enabled');
         } else {
             localStorage.setItem('darkMode', 'disabled');
         }
+
+        // Toggle dark mode when the slider changes
+        toggleDark();
     });
 });
 
