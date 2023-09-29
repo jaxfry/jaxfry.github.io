@@ -58,3 +58,35 @@ cssIcon.addEventListener('mouseleave', () => removeBxSpinClass(cssIcon));
 
 javaIcon.addEventListener('mouseenter', () => addBxSpinClass(javaIcon));
 javaIcon.addEventListener('mouseleave', () => removeBxSpinClass(javaIcon));
+
+
+// Create a secret pattern whitch when the buttons clicked in the right order will go to a secret page
+// Define the correct pattern
+const correctPattern = ['python', 'javascript', 'html', 'css'];
+
+// Keep track of the clicked buttons
+let clickedButtons = [];
+
+// Handle button clicks
+function handleButtonClick(button) {
+  // Add the clicked button to the clickedButtons array
+  clickedButtons.push(button);
+  if (button === 'clear') {
+    // Clear the clickedButtons array
+    clickedButtons = [];
+  }
+
+  // Check if the clicked buttons match the correct pattern
+  if (clickedButtons.length === correctPattern.length && clickedButtons.every((value, index) => value === correctPattern[index])) {
+    // Go to the secret page
+    window.location.href = 'secret-page.html';
+  }
+}
+
+// Attach click event listeners to the buttons
+document.getElementById('python-icon').addEventListener('click', () => handleButtonClick('python'));
+document.getElementById('java-icon').addEventListener('click', () => handleButtonClick('java'));
+document.getElementById('javascript-icon').addEventListener('click', () => handleButtonClick('javascript'));
+document.getElementById('html-icon').addEventListener('click', () => handleButtonClick('html'));
+document.getElementById('css-icon').addEventListener('click', () => handleButtonClick('css'));
+document.getElementById('clear').addEventListener('click', () => handleButtonClick('clear'));
