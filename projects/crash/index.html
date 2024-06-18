@@ -192,6 +192,13 @@
     console.log("This code is running in a different browser.");
     document.write("This code is running in a different browser. I might add support for other browsers later.");
   }
+  
+  window.addEventListener('beforeunload', function (e) {
+    // Cancel the event
+    e.preventDefault();
+    // Chrome requires returnValue to be set
+    e.returnValue = '';
+});
 
 </script>
 
