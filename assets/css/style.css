@@ -1,26 +1,100 @@
+:root {
+    --primary-color: #1E1E1E;
+    --secondary-color: rgba(65, 59, 59, 0.25);
+    --font-family-primary: 'Bukhari', sans-serif;
+}
+
+body {
+    cursor: none;
+}
+
+.cursor-dot {
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-color);
+}
+
+.cursor-outline {
+    --circle-size: 40px;
+    position: fixed;
+    height: var(--circle-size);
+    width: var(--circle-size);
+    border: 1px solid white;
+    border-radius: 100%;
+    top: calc(var(--circle-size) / 2 * -1);
+    left: calc(var(--circle-size) / 2 * -1);
+    pointer-events: none;
+}
+
+@keyframes grow {
+    from {width: 10px; height: 10px;}
+    to {width: 40px; height: 40px;}
+}
+
+@keyframes shrink {
+    from {width: 40px; height: 40px;}
+    to {width: 10px; height: 10px;}
+}
+
+.cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1
+}
+.expanded {
+    width: 40px;
+    height: 40px;
+}
+
+
+@font-face {
+    font-family: 'Bukhari';
+    src: url('../fonts/Bukhari.ttf') format('truetype');
+}
+
 /* Navigation Bar Styles */
-nav {
+.nav-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: rgba(65, 59, 59, 0.25); /* 25% opacity */
-    flex-direction: row-reverse; /* Reverse the order of flex items */
+    background-color: var(--secondary-color);
+    flex-direction: row-reverse;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .menu-icon {
     cursor: pointer;
-    color: #1E1E1E;
+    color: var(--primary-color);
+    font-size: 1.75rem;
 }
 
 .brand {
     font-size: 1.5rem;
     font-weight: bold;
-    font-family: 'Bukhari', sans-serif;
-    color: #1E1E1E;
+    font-family: var(--font-family-primary);
+    color: var(--primary-color);
 }
 
-@font-face {
-    font-family: 'Bukhari';
-    src: url('../fonts/Bukhari.ttf') format('truetype');
+.full-width-container {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.carousel, .carousel-inner, .carousel-item {
+    height: 100%;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
