@@ -1,11 +1,13 @@
 :root {
     --primary-color: #1E1E1E;
     --secondary-color: rgba(65, 59, 59, 0.25);
-    --font-family-primary: 'Bukhari', sans-serif;
+    --font-family-logo: 'Bukhari', sans-serif;
 }
 
 body {
     cursor: none;
+    background-color: #1E1E1E;
+    color: white;
 }
 
 .cursor-dot {
@@ -82,7 +84,7 @@ body {
 .brand {
     font-size: 1.5rem;
     font-weight: bold;
-    font-family: var(--font-family-primary);
+    font-family: var(--font-family-logo);
     color: var(--primary-color);
 }
 
@@ -92,6 +94,7 @@ body {
     position: absolute;
     top: 0;
     z-index: -1;
+    box-shadow: inset 0 0 0 100vmax rgba(0,0,0,.3);
 }
 
 .carousel, .carousel-inner, .carousel-item {
@@ -103,3 +106,49 @@ body {
     height: 100%;
     width: 100%;
 }
+
+.carousel-caption-1 {
+    position: absolute;
+    top: 75px; /* Adjust this value to fine-tune the vertical position */
+    left: 50px;  /* Adjust this value to fine-tune the horizontal position */
+    text-align: left;
+}
+
+.carousel-caption-2 {
+    position: absolute;
+    bottom: 50px; /* Adjust this value to fine-tune the vertical position */
+    right: 60px;  /* Adjust this value to fine-tune the horizontal position */
+    text-align: right;
+}
+
+  .carousel-caption h4 {
+    font-size: 2rem; /* Adjust font size */
+    font-weight: bold;
+    font-family: var(--font-family-logo);
+    color: #757575;
+  }
+
+  .carousel-caption h3 {
+    font-size: 8rem; /* Adjust font size */
+    font-weight: bold;
+    margin-left: 20px;
+    letter-spacing: 10px;
+    font-family: "Playfair Display", serif;
+  }
+
+
+  .carousel-caption p {
+    font-size: 1.25rem; /* Adjust font size */
+    font-weight: normal;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  /* .blurred-box {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.3); /* Adjust the background color and opacity as needed */
+    padding: 10px; /* Adjust padding as needed */
+    border-radius: 5px; /* Optional: add rounded corners */
+    max-width: 20%; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center the box */
+  } */
