@@ -8,6 +8,9 @@ body {
     cursor: none;
     background-color: #1E1E1E;
     color: white;
+    background-color: #000000;
+    background-image: url("https://www.transparenttextures.com/patterns/assault.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 .cursor-dot {
@@ -73,6 +76,8 @@ body {
     flex-direction: row-reverse;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    /* Add a grey transparent bar on the bottom */
+        border-bottom: 1px solid rgba(133, 133, 133, 0.75);
 }
 
 .menu-icon {
@@ -143,12 +148,4 @@ body {
     font-family: "Montserrat", sans-serif;
   }
 
-  /* .blurred-box {
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.3); /* Adjust the background color and opacity as needed */
-    padding: 10px; /* Adjust padding as needed */
-    border-radius: 5px; /* Optional: add rounded corners */
-    max-width: 20%; /* Adjust the maximum width as needed */
-    margin: 0 auto; /* Center the box */
-  } */
+  
