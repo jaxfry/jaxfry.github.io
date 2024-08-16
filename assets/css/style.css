@@ -6,17 +6,23 @@
 
 body {
     cursor: none;
-    background-color: #1E1E1E;
+    /* background-color: #1E1E1E; */
     color: white;
-    background-color: #000000;
-    background-image: url("https://www.transparenttextures.com/patterns/assault.png");
+    /* background-color: #000000;
+    background-image: url("https://www.transparenttextures.com/patterns/assault.png"); */
     /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+p {
+    font-size: 1.25rem;
+    font-weight: normal;
+    font-family: "Montserrat", sans-serif;
 }
 
 .cursor-dot {
     width: 10px;
     height: 10px;
-    background-color: var(--primary-color);
+    background-color: white;
 }
 
 .cursor-outline {
@@ -99,7 +105,6 @@ body {
     position: absolute;
     top: 0;
     z-index: -1;
-    box-shadow: inset 0 0 0 100vmax rgba(0,0,0,.3);
 }
 
 .carousel, .carousel-inner, .carousel-item {
@@ -148,4 +153,83 @@ body {
     font-family: "Montserrat", sans-serif;
   }
 
-  
+  .parallax-caption {
+    transition: transform 0.3s ease-out;
+  }
+
+  /* Slightly stollen */
+    body{
+      background-color: #1c1c1c;
+    }
+    body::after{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      content: "";
+      opacity: .02;  
+      z-index: 1000;
+      pointer-events: none;
+      background: url('../images/noise-250x.gif');
+    }
+
+
+/* If on phone */
+@media (max-width: 768px) {
+    .about p {
+        margin-left: 0px; margin-right: 10px; text-align: left; font-size: 30px; margin-left: 4rem;
+    }
+    .about h3 {
+        font-size: 3rem; line-height: 1.5;text-align: left; margin-top: 1rem; margin-left: 4rem;
+    }
+
+    .about h4 {
+        font-size: 1rem; line-height: 1.5;text-align: left; margin-top: 1rem; margin-left: 4rem;
+    }
+
+    .cursor-dot {
+        display: none;
+    }
+
+    .cursor-outline {
+        display: none;
+    }
+
+    .carousel {
+        height: 70vh;
+    }
+
+    .carousel-caption-1 {
+        top: 50px;
+        left: 20px;
+    }
+
+    .carousel-caption-2 {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .carousel-caption h4 {
+        font-size: 1.5rem;
+        padding-top: 10px;
+    }
+
+    .carousel-caption h3 {
+        font-size: 3rem;
+        padding-top: 10px;
+    }
+}
+
+/* If on desktop */
+@media screen and (min-width: 768px) {
+    .about p {
+        margin-left: 200px; margin-right: 650px; text-align: left; font-size: 50px; margin-left: 4rem;
+    }
+    .about h3 {
+        font-size: 5rem; line-height: 1.5;text-align: left; margin-top: 1rem; margin-left: 4rem;
+    }
+    .about h4 {
+        font-size: 1.5rem; line-height: 1.5;text-align: left; margin-top: 1rem; margin-left: 4rem;
+    }
+}

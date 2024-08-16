@@ -1,0 +1,17 @@
+- category: "Coding"
+  title: "Lorem - <br/> <span style=\"padding-left: 50px;\"> ipsum dolor </span>"
+  description: "sit amet, consectetur adipiscing elit."
+  image: "/assets/images/example.png"
+  alt: "Description of first image"
+
+- category: "Design"
+  title: "Aliquam - <br/> <span style=\"padding-left: 50px;\"> Canada Cool! </span>"
+  description: "at nibh at dolor malesuada."
+  image: "/assets/images/example.png"
+  alt: "Description of second image"
+
+- category: "Development"
+  title: "Ut - <br/> <span style=\"padding-left: 50px;\"> Hello Humans </span>"
+  description: "nec lectus in ullamcorper."
+  image: "/assets/images/example.png"
+  alt: "Description of third image"
