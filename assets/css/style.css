@@ -28,7 +28,7 @@ body::after {
 }
 
 p {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     font-weight: normal;
     font-family: var(--font-family-body);
 }
@@ -108,15 +108,16 @@ p {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(133, 133, 133, 0.75);
-    position: fixed;
-    z-index: 1000;
+    position: fixed; /* Ensure it's positioned correctly */
+    z-index: 1000; /* Higher z-index than .full-width-container */
     width: 100%;
 }
+
 
 .menu-icon {
     cursor: pointer;
     color: var(--primary-color);
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     padding-right: 25px;
 }
 
@@ -154,15 +155,15 @@ p {
 .menu-items.active {
     display: flex;
 }
-
 /* Carousel Styles */
 .full-width-container {
     height: 100vh;
     width: 100vw;
     position: absolute;
     top: 0;
-    z-index: 500;
+    z-index: 500; /* Ensure this is lower than .nav-bar's z-index */
 }
+
 
 .carousel, .carousel-inner, .carousel-item {
     height: 100%;
@@ -176,39 +177,38 @@ p {
 
 .carousel-caption-1 {
     position: absolute;
-    top: 50px;
-    left: 20px;
+    top: 75px;
+    left: 50px;
     text-align: left;
-    max-width: 90%;
 }
 
 .carousel-caption-2 {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 50px;
+    right: 60px;
     text-align: right;
-    max-width: 90%;
+}
+
+.carousel-caption h3 {
+    font-size: 8vw; /* Adjust the scaling factor to your preference */
+    font-weight: bold;
+    margin-left: 20px;
+    letter-spacing: 0.5vw; /* Scale the letter spacing too */
+    font-family: "Playfair Display", serif;
 }
 
 .carousel-caption h4 {
-    font-size: 1.75rem;
+    font-size: 2vw; /* Adjust the scaling factor to your preference */
     font-weight: bold;
     font-family: var(--font-family-logo);
     color: var(--carousel-caption-color);
 }
 
-.carousel-caption h3 {
-    font-size: 3.5rem;
-    font-weight: bold;
-    margin-left: 20px;
-    letter-spacing: 5px;
-    font-family: "Playfair Display", serif;
-}
-
 .carousel-caption p {
-    font-size: 1.125rem;
+    font-size: 1.25vw; /* Adjust the scaling factor to your preference */
     font-family: var(--font-family-body);
 }
+
 
 .parallax-caption {
     transition: transform 0.3s ease-out;
@@ -229,31 +229,27 @@ p {
 }
 
 /* Responsive Styles */
-
-@media (max-width: 1000px) {
-    .cursor-dot,
-    .cursor-outline {
-        display: none;
-    }
-
-    body {
-        cursor: auto;
-    }
-}
-
-
 @media (max-width: 768px) {
-    p, h3, h4 {
-        margin-left: 1rem;
-        margin-right: 1rem;
+    .about p, .default-page p {
+        margin: 0 10px;
+        text-align: left;
+        font-size: 30px;
+        margin-left: 4rem;
     }
 
-    h3, h4 {
-        font-size: 2rem;
+    .about h3, .about h4, .default-page h3, .default-page h4 {
+        margin-left: 4rem;
+        text-align: left;
     }
 
-    p {
+    .about h3, .default-page h3 {
+        font-size: 3rem;
+        margin-top: 1rem;
+    }
+
+    .about h4, .default-page h4 {
         font-size: 1rem;
+        margin-top: 1rem;
     }
 
     .cursor-dot, .cursor-outline {
@@ -264,87 +260,61 @@ p {
         height: 70vh;
     }
 
+    .carousel-caption-1 {
+        top: 50px;
+        left: 20px;
+    }
+
+    .carousel-caption-2 {
+        bottom: 20px;
+        right: 20px;
+    }
+
     .carousel-caption h4 {
         font-size: 1.5rem;
         padding-top: 10px;
-    }
-
-    .carousel-caption h3 {
-        font-size: 2rem;
-        padding-top: 10px;
-    }
-
-    .project-previews a {
-        font-size: 1.5rem;
-        margin: 0 10px;
-    }
-
-    .footer {
-        padding: 0.5rem;
-    }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    p {
-        margin: 0 5vw;
-        font-size: 1.25rem;
-    }
-
-    h3, h4 {
-        margin-left: 2rem;
-        margin-right: 2rem;
-        text-align: left;
-        font-size: 2.5rem;
     }
 
     .carousel-caption h3 {
         font-size: 3rem;
-        margin-left: 0;
-        letter-spacing: normal;
-    }
-
-    .carousel-caption h4 {
-        font-size: 1.75rem;
-    }
-
-    .project-previews a {
-        font-size: 1.75rem;
-        margin: 0 3vw;
+        padding-top: 10px;
     }
 }
 
-@media screen and (min-width: 1025px) {
-    p {
-        margin: 0 10vw;
-        font-size: 1.5rem;
-    }
-
-    h3, h4 {
+@media screen and (min-width: 768px) {
+    .about p, .default-page p {
+        margin: 0 650px 0 200px;
+        text-align: left;
+        font-size: 50px;
         margin-left: 4rem;
-        margin-right: 4rem;
+    }
+
+    .about h3, .about h4, .default-page h3, .default-page h4 {
+        margin-left: 4rem;
         text-align: left;
-        font-size: 3rem;
     }
 
-    .project-previews a {
-        font-size: 2rem;
-        margin: 0 5vw;
+    .about h3, .default-page h3 {
+        font-size: 5rem;
+        margin-top: 1rem;
+    }
+
+    .about h4, .default-page h4 {
+        font-size: 1.5rem;
+        margin-top: 1rem;
     }
 }
 
 
-.post-container h1 {
-    margin-top: 125px;
-    margin-bottom: 50px;
-    font-size: 3rem;
-    font-weight: bold;
-    font-family: var(--font-family-logo);
-    color: var(--primary-color);
+.project-previews a {
+    color: orange;
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: var(--font-family-body);
+    margin: 0 70px;
+    display: block;
     text-align: center;
-}
-
-.post-container p {
-    margin-bottom: 50px;
+    margin-top: 20px;
 }
 
 .footer {
@@ -377,7 +347,6 @@ p {
     text-decoration: underline;
 }
 
-
 .error-404 {
     font-size: 5rem;
     font-family: var(--font-family-logo);
@@ -385,4 +354,56 @@ p {
     text-align: center;
     margin-top: 2px;
     cursor:auto;
+}
+
+@media (max-width: 768px) {
+    .carousel-caption {
+        font-size: 1.2rem;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .carousel-caption h3 {
+        font-size: 15vw; /* Adjust the scaling factor to your preference */
+        font-weight: bold;
+        margin-left: 20px;
+        letter-spacing: 0.5vw; /* Scale the letter spacing too */
+        font-family: "Playfair Display", serif;
+    }
+
+    .carousel-caption h4 {
+        font-size: 8vw; /* Adjust the scaling factor to your preference */
+        font-weight: bold;
+        font-family: var(--font-family-logo);
+        color: var(--carousel-caption-color);
+        margin-top: 20px;
+    }
+
+    .carousel-caption p {
+        font-size: 1.25vw; /* Adjust the scaling factor to your preference */
+        font-family: var(--font-family-body);
+    }
+
+    .carousel-caption span {
+        padding-left: 0;
+    }
+}
+
+.post-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+.post-content {
+    margin: 0 200px;
+    text-align: left;
+    font-size: 1.5rem;
+    font-family: var(--font-family-body);
+}
+@media (pointer: coarse) and (hover: none) {
+    * {
+        cursor: none;
+    }
 }
