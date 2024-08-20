@@ -28,7 +28,7 @@ body::after {
 }
 
 p {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     font-weight: normal;
     font-family: var(--font-family-body);
 }
@@ -108,16 +108,15 @@ p {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(133, 133, 133, 0.75);
-    position: fixed; /* Ensure it's positioned correctly */
-    z-index: 1000; /* Higher z-index than .full-width-container */
+    position: fixed;
+    z-index: 1000;
     width: 100%;
 }
-
 
 .menu-icon {
     cursor: pointer;
     color: var(--primary-color);
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     padding-right: 25px;
 }
 
@@ -155,15 +154,15 @@ p {
 .menu-items.active {
     display: flex;
 }
+
 /* Carousel Styles */
 .full-width-container {
     height: 100vh;
     width: 100vw;
     position: absolute;
     top: 0;
-    z-index: 500; /* Ensure this is lower than .nav-bar's z-index */
+    z-index: 500;
 }
-
 
 .carousel, .carousel-inner, .carousel-item {
     height: 100%;
@@ -177,35 +176,37 @@ p {
 
 .carousel-caption-1 {
     position: absolute;
-    top: 75px;
-    left: 50px;
+    top: 50px;
+    left: 20px;
     text-align: left;
+    max-width: 90%;
 }
 
 .carousel-caption-2 {
     position: absolute;
-    bottom: 50px;
-    right: 60px;
+    bottom: 20px;
+    right: 20px;
     text-align: right;
+    max-width: 90%;
 }
 
 .carousel-caption h4 {
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: bold;
     font-family: var(--font-family-logo);
     color: var(--carousel-caption-color);
 }
 
 .carousel-caption h3 {
-    font-size: 8rem;
+    font-size: 3.5rem;
     font-weight: bold;
     margin-left: 20px;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
     font-family: "Playfair Display", serif;
 }
 
 .carousel-caption p {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     font-family: var(--font-family-body);
 }
 
@@ -229,26 +230,17 @@ p {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .about p, .default-page p {
-        margin: 0 10px;
-        text-align: left;
-        font-size: 30px;
-        margin-left: 4rem;
+    p, h3, h4 {
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 
-    .about h3, .about h4, .default-page h3, .default-page h4 {
-        margin-left: 4rem;
-        text-align: left;
+    h3, h4 {
+        font-size: 2rem;
     }
 
-    .about h3, .default-page h3 {
-        font-size: 3rem;
-        margin-top: 1rem;
-    }
-
-    .about h4, .default-page h4 {
+    p {
         font-size: 1rem;
-        margin-top: 1rem;
     }
 
     .cursor-dot, .cursor-outline {
@@ -259,141 +251,70 @@ p {
         height: 70vh;
     }
 
-    .carousel-caption-1 {
-        top: 50px;
-        left: 20px;
-    }
-
-    .carousel-caption-2 {
-        bottom: 20px;
-        right: 20px;
-    }
-
     .carousel-caption h4 {
         font-size: 1.5rem;
         padding-top: 10px;
+    }
+
+    .carousel-caption h3 {
+        font-size: 2rem;
+        padding-top: 10px;
+    }
+
+    .project-previews a {
+        font-size: 1.5rem;
+        margin: 0 10px;
+    }
+
+    .footer {
+        padding: 0.5rem;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    p {
+        margin: 0 5vw;
+        font-size: 1.25rem;
+    }
+
+    h3, h4 {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        text-align: left;
+        font-size: 2.5rem;
     }
 
     .carousel-caption h3 {
         font-size: 3rem;
-        padding-top: 10px;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .about p, .default-page p {
-        margin: 0 650px 0 200px;
-        text-align: left;
-        font-size: 50px;
-        margin-left: 4rem;
-    }
-
-    .about h3, .about h4, .default-page h3, .default-page h4 {
-        margin-left: 4rem;
-        text-align: left;
-    }
-
-    .about h3, .default-page h3 {
-        font-size: 5rem;
-        margin-top: 1rem;
-    }
-
-    .about h4, .default-page h4 {
-        font-size: 1.5rem;
-        margin-top: 1rem;
-    }
-}
-
-
-.project-previews a {
-    color: orange;
-    font-size: 2rem;
-    font-weight: 800;
-    font-family: var(--font-family-body);
-    margin: 0 70px;
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.footer {
-    margin-top: 200px;
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    border-top: 1px solid rgba(133, 133, 133, 0.75);
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer-nav {
-    margin-top: 1rem;
-}
-
-.footer-nav a {
-    color: white;
-    margin: 0 1rem;
-    text-decoration: none;
-    font-family: var(--font-family-body);
-}
-
-.footer-nav a:hover {
-    text-decoration: underline;
-}
-
-.error-404 {
-    font-size: 5rem;
-    font-family: var(--font-family-logo);
-    color: var(white);
-    text-align: center;
-    margin-top: 2px;
-    cursor:auto;
-}
-
-@media (max-width: 768px) {
-    .carousel-caption {
-        font-size: 1.2rem;
-        padding: 10px;
-        text-align: center;
-    }
-
-    .carousel-caption h3 {
-        font-size: 1.5rem;
+        margin-left: 0;
+        letter-spacing: normal;
     }
 
     .carousel-caption h4 {
-        font-size: 1.2rem;
+        font-size: 1.75rem;
     }
 
-    .carousel-caption p {
-        font-size: 1rem;
-    }
-
-    .carousel-caption span {
-        padding-left: 0;
+    .project-previews a {
+        font-size: 1.75rem;
+        margin: 0 3vw;
     }
 }
 
-.post-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 100px;
-}
-.post-content {
-    margin: 0 200px;
-    text-align: left;
-    font-size: 1.5rem;
-    font-family: var(--font-family-body);
-}
-@media (pointer: coarse) and (hover: none) {
-    * {
-        cursor: none;
+@media screen and (min-width: 1025px) {
+    p {
+        margin: 0 10vw;
+        font-size: 1.5rem;
+    }
+
+    h3, h4 {
+        margin-left: 4rem;
+        margin-right: 4rem;
+        text-align: left;
+        font-size: 3rem;
+    }
+
+    .project-previews a {
+        font-size: 2rem;
+        margin: 0 5vw;
     }
 }
