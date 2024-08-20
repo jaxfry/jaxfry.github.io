@@ -231,7 +231,7 @@ p {
 /* Responsive Styles */
 @media (max-width: 768px) {
     .about p, .default-page p {
-        margin: 0 10px;
+        margin: 0 40px;
         text-align: left;
         font-size: 30px;
         margin-left: 4rem;
@@ -283,7 +283,7 @@ p {
 
 @media screen and (min-width: 768px) {
     .about p, .default-page p {
-        margin: 0 650px 0 200px;
+        margin: 0 200px 0 200px;
         text-align: left;
         font-size: 50px;
         margin-left: 4rem;
