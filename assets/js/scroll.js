@@ -26,7 +26,7 @@ let sx = 0, // For scroll positions
 let dx = sx, // For container positions
     dy = sy;
 
-body.style.height = main.clientHeight + 'px';
+body.style.height = (main.clientHeight - 10000) + 'px';
 
 
 // Throttle the scroll event for better performance

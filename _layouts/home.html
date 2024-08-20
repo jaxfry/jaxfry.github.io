@@ -6,7 +6,8 @@ layout: page
     
     <!-- Carousel indicators -->
     <div class="carousel-indicators parallax-caption">
-      {% for project in site.data.projects-showcase %}
+      {% assign recent_projects = site.data.projects-showcase | slice: 0, 6  %}
+      {% for project in recent_projects %}
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="{{ forloop.index0 }}" class="{% if forloop.first %}active{% endif %}" aria-label="Slide {{ forloop.index }}"></button>
       {% endfor %}
       </div>
@@ -29,7 +30,7 @@ layout: page
       {% endfor %}
     </div>
   </div>
-  <h2 style="margin-left: 50px; margin-top: 20px;">Scroll <i class="fa-solid fa-angle-down"></i></h2>
+  <h2 style="margin-left: 50px; margin-top: 30px;">Scroll <i class="fa-solid fa-angle-down"></i></h2>
 
   <hr width="95%" style="margin-top: 20px; margin-bottom: 50px; border: 1px solid #fff; margin-left: auto; margin-right: auto;">
   {{ content }}

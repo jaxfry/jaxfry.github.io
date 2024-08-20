@@ -2,63 +2,65 @@
     --primary-color: #1E1E1E;
     --secondary-color: rgba(65, 59, 59, 0.25);
     --font-family-logo: 'Bukhari', sans-serif;
+    --font-family-body: "Montserrat", sans-serif;
+    --cursor-size: 10px;
+    --outline-size: 40px;
+    --carousel-caption-color: #757575;
 }
 
 body {
     cursor: none;
-    /* background-color: #1E1E1E; */
     color: white;
-    /* background-color: #000000;
-    background-image: url("https://www.transparenttextures.com/patterns/assault.png"); */
-    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    background-color: #1c1c1c;  
+}
+
+body::after {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    content: "";
+    opacity: 0.02;  
+    z-index: 1000;
+    pointer-events: none;
+    background: url('../images/noise-250x.gif');
 }
 
 p {
     font-size: 1.25rem;
     font-weight: normal;
-    font-family: "Montserrat", sans-serif;
-}
-
-.cursor-dot {
-    width: 10px;
-    height: 10px;
-    background-color: white;
-}
-
-.cursor-outline {
-    --circle-size: 40px;
-    position: fixed;
-    height: var(--circle-size);
-    width: var(--circle-size);
-    border: 1px solid white;
-    border-radius: 100%;
-    top: calc(var(--circle-size) / 2 * -1);
-    left: calc(var(--circle-size) / 2 * -1);
-    pointer-events: none;
-}
-
-@keyframes grow {
-    from {width: 10px; height: 10px; opacity: 1;} 
-    to {width: 40px; height: 40px; opacity: 0.5;}
-}
-
-@keyframes shrink {
-    from {width: 40px; height: 40px;}
-    to {width: 10px; height: 10px;}
+    font-family: var(--font-family-body);
 }
 
 .cursor-dot {
     position: fixed;
     top: 0;
     left: 0;
-    transform: translate(-50%, -50%);
+    width: var(--cursor-size);
+    height: var(--cursor-size);
+    background-color: white;
     border-radius: 50%;
+    transform: translate(-50%, -50%);
     pointer-events: none;
-    z-index: 1
+    z-index: 1000;
 }
+
+.cursor-outline {
+    position: fixed;
+    height: var(--outline-size);
+    width: var(--outline-size);
+    border: 1px solid white;
+    border-radius: 50%;
+    top: calc(var(--outline-size) / 2 * -1);
+    left: calc(var(--outline-size) / 2 * -1);
+    pointer-events: none;
+    z-index: 1000;
+}
+
 .expanded {
-    width: 40px;
-    height: 40px;
+    width: var(--outline-size);
+    height: var(--outline-size);
     opacity: 0.5;
 }
 
@@ -66,6 +68,29 @@ p {
     opacity: 0;
 }
 
+@keyframes grow {
+    from {
+        width: var(--cursor-size);
+        height: var(--cursor-size);
+        opacity: 1;
+    } 
+    to {
+        width: var(--outline-size);
+        height: var(--outline-size);
+        opacity: 0.5;
+    }
+}
+
+@keyframes shrink {
+    from {
+        width: var(--outline-size);
+        height: var(--outline-size);
+    }
+    to {
+        width: var(--cursor-size);
+        height: var(--cursor-size);
+    }
+}
 
 @font-face {
     font-family: 'Bukhari';
@@ -82,14 +107,18 @@ p {
     flex-direction: row-reverse;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    /* Add a grey transparent bar on the bottom */
-        border-bottom: 1px solid rgba(133, 133, 133, 0.75);
+    border-bottom: 1px solid rgba(133, 133, 133, 0.75);
+    position: fixed; /* Ensure it's positioned correctly */
+    z-index: 1000; /* Higher z-index than .full-width-container */
+    width: 100%;
 }
+
 
 .menu-icon {
     cursor: pointer;
     color: var(--primary-color);
     font-size: 1.75rem;
+    padding-right: 25px;
 }
 
 .brand {
@@ -99,13 +128,41 @@ p {
     color: var(--primary-color);
 }
 
+.menu-items {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #1c1c1c;
+    width: 200px;
+    border: 1px solid rgba(133, 133, 133, 0.75);
+}
+
+.menu-items a {
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+.menu-items a:hover {
+    background-color: var(--primary-color);
+    color: #757575;
+}
+
+.menu-items.active {
+    display: flex;
+}
+/* Carousel Styles */
 .full-width-container {
     height: 100vh;
     width: 100vw;
     position: absolute;
     top: 0;
-    z-index: -1;
+    z-index: 500; /* Ensure this is lower than .nav-bar's z-index */
 }
+
 
 .carousel, .carousel-inner, .carousel-item {
     height: 100%;
@@ -119,61 +176,43 @@ p {
 
 .carousel-caption-1 {
     position: absolute;
-    top: 75px; /* Adjust this value to fine-tune the vertical position */
-    left: 50px;  /* Adjust this value to fine-tune the horizontal position */
+    top: 75px;
+    left: 50px;
     text-align: left;
 }
 
 .carousel-caption-2 {
     position: absolute;
-    bottom: 50px; /* Adjust this value to fine-tune the vertical position */
-    right: 60px;  /* Adjust this value to fine-tune the horizontal position */
+    bottom: 50px;
+    right: 60px;
     text-align: right;
 }
 
-  .carousel-caption h4 {
-    font-size: 2rem; /* Adjust font size */
+.carousel-caption h4 {
+    font-size: 2rem;
     font-weight: bold;
     font-family: var(--font-family-logo);
-    color: #757575;
-  }
+    color: var(--carousel-caption-color);
+}
 
-  .carousel-caption h3 {
-    font-size: 8rem; /* Adjust font size */
+.carousel-caption h3 {
+    font-size: 8rem;
     font-weight: bold;
     margin-left: 20px;
     letter-spacing: 10px;
     font-family: "Playfair Display", serif;
-  }
+}
 
+.carousel-caption p {
+    font-size: 1.25rem;
+    font-family: var(--font-family-body);
+}
 
-  .carousel-caption p {
-    font-size: 1.25rem; /* Adjust font size */
-    font-weight: normal;
-    font-family: "Montserrat", sans-serif;
-  }
-
-  .parallax-caption {
+.parallax-caption {
     transition: transform 0.3s ease-out;
-  }
+}
 
-  /* Slightly stollen */
-    body{
-      background-color: #1c1c1c;
-    }
-    body::after{
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      content: "";
-      opacity: .02;  
-      z-index: 1000;
-      pointer-events: none;
-      background: url('../images/noise-250x.gif');
-    }
-
+/* Animation Styles */
 .hidden {
     opacity: 0;
     filter: blur(5px);
@@ -187,26 +226,31 @@ p {
     transform: translateY(0);
 }
 
-
-
-/* If on phone */
+/* Responsive Styles */
 @media (max-width: 768px) {
-    .about p {
-        margin-left: 0px; margin-right: 10px; text-align: left; font-size: 30px; margin-left: 4rem;
-    }
-    .about h3 {
-        font-size: 3rem; line-height: 1.5;text-align: left; margin-top: 1rem; margin-left: 4rem;
-    }
-
-    .about h4 {
-        font-size: 1rem; line-height: 1.5;text-align: left; margin-top: 1rem; margin-left: 4rem;
+    .about p, .default-page p {
+        margin: 0 10px;
+        text-align: left;
+        font-size: 30px;
+        margin-left: 4rem;
     }
 
-    .cursor-dot {
-        display: none;
+    .about h3, .about h4, .default-page h3, .default-page h4 {
+        margin-left: 4rem;
+        text-align: left;
     }
 
-    .cursor-outline {
+    .about h3, .default-page h3 {
+        font-size: 3rem;
+        margin-top: 1rem;
+    }
+
+    .about h4, .default-page h4 {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+
+    .cursor-dot, .cursor-outline {
         display: none;
     }
 
@@ -235,15 +279,101 @@ p {
     }
 }
 
-/* If on desktop */
 @media screen and (min-width: 768px) {
-    .about p {
-        margin-left: 200px; margin-right: 650px; text-align: left; font-size: 50px; margin-left: 4rem;
+    .about p, .default-page p {
+        margin: 0 650px 0 200px;
+        text-align: left;
+        font-size: 50px;
+        margin-left: 4rem;
     }
-    .about h3 {
-        font-size: 5rem; line-height: 1.5;text-align: left; margin-top: 1rem; margin-left: 4rem;
+
+    .about h3, .about h4, .default-page h3, .default-page h4 {
+        margin-left: 4rem;
+        text-align: left;
     }
-    .about h4 {
-        font-size: 1.5rem; line-height: 1.5;text-align: left; margin-top: 1rem; margin-left: 4rem;
+
+    .about h3, .default-page h3 {
+        font-size: 5rem;
+        margin-top: 1rem;
+    }
+
+    .about h4, .default-page h4 {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+}
+
+
+.project-previews a {
+    color: orange;
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: var(--font-family-body);
+    margin: 0 70px;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer {
+    margin-top: 200px;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    border-top: 1px solid rgba(133, 133, 133, 0.75);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-nav {
+    margin-top: 1rem;
+}
+
+.footer-nav a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-family: var(--font-family-body);
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+.error-404 {
+    font-size: 5rem;
+    font-family: var(--font-family-logo);
+    color: var(white);
+    text-align: center;
+    margin-top: 2px;
+    cursor:auto;
+}
+
+@media (max-width: 768px) {
+    .carousel-caption {
+        font-size: 1.2rem;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .carousel-caption h3 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption h4 {
+        font-size: 1.2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+
+    .carousel-caption span {
+        padding-left: 0;
     }
 }
