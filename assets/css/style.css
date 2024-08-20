@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #1E1E1E;
+    --primary-color: #f89326;
     --secondary-color: rgba(65, 59, 59, 0.25);
     --font-family-logo: 'Bukhari', sans-serif;
     --font-family-body: "Montserrat", sans-serif;
@@ -126,6 +126,7 @@ p {
     font-weight: bold;
     font-family: var(--font-family-logo);
     color: var(--primary-color);
+    text-decoration: none;
 }
 
 .menu-items {
@@ -376,4 +377,18 @@ p {
     .carousel-caption span {
         padding-left: 0;
     }
+}
+
+.post-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+.post-content {
+    margin: 0 200px;
+    text-align: left;
+    font-size: 1.5rem;
+    font-family: var(--font-family-body);
 }

@@ -1,5 +1,6 @@
-<div class="project-cards hidden">
-  {% assign recent_projects = site.data.projects-showcase | slice: 0, 6  %}
+<div class="project-cards">
+  {% assign max_projects = include.max_projects | default: site.data.projects-showcase.size %}
+  {% assign recent_projects = site.data.projects-showcase | slice: 0, max_projects  %}
   {% for project in recent_projects %}
     <div class="card clickable">
       <img src="{{ project.image }}" class="card-img">
@@ -11,6 +12,7 @@
     </div>
   {% endfor %}
 </div>
+
 
 <style>
 .project-cards {

@@ -1,0 +1,45 @@
+---
+layout: page
+---
+<style>
+  .posts-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 100px;
+  }
+
+  .posts-list li {
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .posts-list li:hover {
+    background-color: #f9f9f9;
+  }
+
+  .posts-list a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+
+  .posts-list a:hover {
+    color: #0073e6;
+  }
+  .posts-list h1 {
+    margin: 0 0 20px 0;
+  }
+</style>
+
+<ul class="posts-list">
+  <h1>Blog Posts</h1>
+  {% for post in site.posts %}
+  <li>
+    <a href="{{ post.url }}">{{ post.title }} - {{ site.time | date_to_long_string }}</a>
+  </li>
+  {% endfor %}
+</ul>
