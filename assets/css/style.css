@@ -392,3 +392,8 @@ p {
     font-size: 1.5rem;
     font-family: var(--font-family-body);
 }
+@media (pointer: coarse) and (hover: none) {
+    * {
+        cursor: none;
+    }
+}
