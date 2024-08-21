@@ -24,13 +24,15 @@ document.querySelectorAll('a, button, .clickable').forEach(element => {
     element.addEventListener('mouseover', () => {
         cursorDot.style.animation="grow 200ms";
         cursorDot.classList.add("expanded")
+        cursorDot.classList.add("invert")
         cursorOutline.classList.add("transparent")
     });
     element.addEventListener('mouseout', () => {
       cursorDot.style.animation="shrink 200ms";
       cursorDot.classList.remove("expanded")
-      cursorOutline.classList.remove("transparent")
+      cursorDot.classList.remove("invert")
 
+      cursorOutline.classList.remove("transparent")
     });
 });
 

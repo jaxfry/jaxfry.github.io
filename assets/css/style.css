@@ -61,11 +61,15 @@ p {
 .expanded {
     width: var(--outline-size);
     height: var(--outline-size);
-    opacity: 0.5;
 }
 
 .transparent {
     opacity: 0;
+}
+
+.invert {
+    mix-blend-mode: difference;
+    color: white;
 }
 
 @keyframes grow {
@@ -115,7 +119,6 @@ p {
 
 
 .menu-icon {
-    cursor: pointer;
     color: var(--primary-color);
     font-size: 1.75rem;
     padding-right: 25px;

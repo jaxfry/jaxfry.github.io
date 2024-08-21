@@ -1,1 +1,6 @@
 title: JaxFry
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
