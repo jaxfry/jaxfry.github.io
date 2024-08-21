@@ -10,5 +10,10 @@ alt: "Description of first image"
 ## Crash - Crash your browser
 
 This project is designed to crash your browser. It is a simple demonstration of how certain web technologies can be used to create a crash.
+<a href="/pages/crash/">Go to page</a>
 
-![Crash Image](/assets/images/crash.png)
+
+<div class="info">
+    <h5>Coding Language: JavaScript</h5>
+    <h5>Year: 2023</h5>
+</div>

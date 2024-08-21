@@ -7,3 +7,10 @@ description: "A new Minecraft hacked client made by JaxFry."
 image: "/assets/images/hacked-client.png"
 alt: "Description of first image"
 ---
+
+<a href="/pages/client/">Go to page</a>
+
+<div class="info">
+    <h5>Coding Language: Java</h5>
+    <h5>Year: 2023</h5>
+</div>
