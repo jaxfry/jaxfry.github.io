@@ -313,6 +313,13 @@ p {
 
 
 .project-previews a {
+    font-family: var(--font-family-body);
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.view-rest {
     color: orange;
     font-size: 2rem;
     font-weight: 800;
