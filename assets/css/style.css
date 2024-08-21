@@ -316,6 +316,7 @@ p {
     font-family: var(--font-family-body);
     display: block;
     text-align: center;
+    text-decoration: none;
 }
 
 .view-rest {
