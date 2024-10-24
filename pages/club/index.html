@@ -10,6 +10,88 @@ permalink: /club/
 <div class="post-container">
     <h1>Coding Club Resources Page</h1>
     <p>Here you can find links posted in class, downloads, learning resources, and much more!</p>
+
+    <!-- #2 -->
+    <div class="post-content" style="margin-top: 50px;">
+        <h2>#2 - Introduction to Data Types</h2>
+
+        <h3>Intermediate Mini-Challenge</h3>
+        <p>Background: Tamagotchi was a digital pet created in Japan in 1996. Users cared for there tamagotchi by feeding, playing, and cleaning up after them, mimicking owning a real pet! After a while there pet could grow and evolve if it was well taken care of. Tamagotchi was a very popular product all around the globe.</p>
+        <img src="{{ 'pages/club/images/tamagotchi.png' | relative_url }}" alt="Tamagotchi" style="width: 100%; max-width: 500px; margin: 0 auto; display: block;">
+
+        <p>Task Advanced Version: 
+            Create your own version of a Tamagotchi in Python with a text based interface! Include attributes such as happiness and hunger, and be able to play with it. Be creative, expand on from there!
+
+            If you are wanting to expand upon this project, here are some ideas:
+            - Add more attributes such as age, weight, and energy
+            - Add more activities such as feeding, cleaning, and sleeping
+            - Add a GUI interface or ASCII art
+            - Add a save feature
+            - If you're feeling really ambitious, add a multiplayer feature. Fun fact, Tamagotchi did have a multiplayer feature in later versions then the original!
+        </p>
+
+        <p>Task Beginner Version:
+            Create a simpler version where users can only feed or play with the pet and see how it effects the pets attributes.
+        </p>
+
+        <h4>Starter Code</h4>
+        <p>If you wish to use it...</p>
+        <pre>
+        <code>
+            # Virtual Pet Starter Code
+
+            class Pet:
+                def __init__(self):
+                    # Initialize pet attributes here
+                    pass
+            
+                def feed(self):
+                    # Code to feed the pet and increase hunger level
+                    pass
+            
+                def play(self):
+                    # Code to play with the pet and increase happiness level
+                    pass
+            
+                def display_status(self):
+                    # Code to display the pet's current status (happiness, hunger)
+                    pass
+            
+            # Main interaction loop
+            def main():
+                my_pet = Pet()
+                
+                while True:
+                    action = input("What would you like to do? (feed/play/exit): ").lower()
+                    
+                    if action == 'feed':
+                        my_pet.feed()
+                    elif action == 'play':
+                        my_pet.play()
+                    elif action == 'exit':
+                        print("Goodbye!")
+                        break
+                    else:
+                        print("Invalid action. Please choose 'feed', 'play', or 'exit'.")
+                    
+                    my_pet.display_status()
+            
+            if __name__ == "__main__":
+                main()
+        </code>
+        </pre>
+        <p>We will cover a solution on the next club day. If you have completed the challenge, feel free to add more features. Eg. encrypt function, cipher brute forcer, be creative! If you are uninterested in the challenge, feel free to work on your own (coding related) project. If you have any suggestions for future mini-challenges, let me know. We will be announcing the people who have completed the challenge on the Discord unless you wish me not to do so.</p>
+
+        <p>Good Luck!</p>
+
+        <h3>Links</h3>
+        <ul>
+            <li><a href="https://docs.google.com/presentation/d/1FChREaXy_KiVjGNdjbuGah4fLKHdpPd5ZuacL-CkLyw/edit?usp=sharing">Slideshow Archive</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Tamagotchi">Tamagotchi Wikipedia</a></li>
+        </ul>
+    </div>
+
+    <!-- #1 -->
     <div class="post-content" style="margin-top: 50px;">
         <h2>#1 - Getting Started With Variables and VS Code</h2>
 
