@@ -4,3 +4,6 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+  anime:
+    output: true
+    permalink: /anime/:path/

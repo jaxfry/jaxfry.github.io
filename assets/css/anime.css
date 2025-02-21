@@ -1,0 +1,41 @@
+.anime-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .shrine-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .character-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  }
+  
+  .character-info {
+    padding: 1rem;
+  }
+  
+  .quotes blockquote {
+    font-style: italic;
+    border-left: 4px solid #6c757d;
+    padding-left: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .standard-anime-container {
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .standard-anime-container img {
+    max-width: 300px;
+    border-radius: 10px;
+  }

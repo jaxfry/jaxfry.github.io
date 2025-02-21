@@ -1,0 +1,38 @@
+---
+layout: default
+---
+{% if page.special == false %}
+    <link rel="stylesheet" href="{{ '/assets/css/anime.css' | relative_url }}">
+    <style>
+        .shrine-container{
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+    </style>
+{% endif %}
+
+<div class="anime-container">
+    <div class="anime-header">
+        <h1>{{ page.title }}</h1>
+        {% if page.series %}
+            <h2 class="series-title">{{ page.series }}</h2>
+        {% endif %}
+    </div>
+
+    <div class="shrine-container">
+        <div class="character-image">
+            <img src="{{ page.image | relative_url}}" alt="{{ page.character_name }}">
+        </div>
+        <div class="character-info">
+            <h3>{{ page.character_name }}</h3>
+            <p class="character-description">{{ page.description }}</p>
+            {% if page.quotes %}
+            <div class="quotes">
+                {% for quote in page.quotes %}
+                <blockquote>{{ quote }}</blockquote>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+</div>
