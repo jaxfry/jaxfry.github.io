@@ -10,8 +10,15 @@ document.addEventListener('DOMContentLoaded', function() {
   let ticking = false;
 
   if (main) {
-    // Adjust body height based on main content
-    body.style.height = (main.clientHeight - 10000) + 'px';
+    // Set body height so scrolling stops exactly when the bottom of #main reaches the viewport bottom.
+    // Since the custom scroll translates #main upward at scroll speed (2× effective scroll rate),
+    // the required body height = (mainTop + main.clientHeight + viewportHeight) / 2.
+    const setBodyHeight = () => {
+      const mainTop = main.getBoundingClientRect().top + window.scrollY;
+      body.style.height = Math.ceil((mainTop + main.clientHeight + window.innerHeight) / 2) + 'px';
+    };
+    setBodyHeight();
+    window.addEventListener('resize', setBodyHeight);
   }
 
   function parallaxEffect() {
