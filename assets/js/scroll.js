@@ -9,8 +9,10 @@ document.addEventListener('DOMContentLoaded', function() {
   let dx = 0, dy = 0;
   let ticking = false;
 
-  // Adjust body height based on main content
-  body.style.height = (main.clientHeight - 10000) + 'px';
+  if (main) {
+    // Adjust body height based on main content
+    body.style.height = (main.clientHeight - 10000) + 'px';
+  }
 
   function parallaxEffect() {
     const scrollPosition = window.scrollY;
@@ -34,26 +36,30 @@ document.addEventListener('DOMContentLoaded', function() {
     const dampingFactor = 0.05; // Lower value for more momentum
     dx += (sx - dx) * dampingFactor;
     dy += (sy - dy) * dampingFactor;
-    main.style.transform = `translate3d(${-dx}px, ${-dy}px, 0)`;
+    if (main) {
+      main.style.transform = `translate3d(${-dx}px, ${-dy}px, 0)`;
+    }
 
     parallaxEffect(); // Apply parallax effect during the smooth scroll
   }
 
-  window.addEventListener('scroll', function() {
-    if (!ticking) {
-      window.requestAnimationFrame(function() {
-        easeScroll();
-        ticking = false;
-      });
-      ticking = true;
-    }
-  });
+  if (main) {
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        window.requestAnimationFrame(function() {
+          easeScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
 
-  // Start the rendering loop for smooth scroll
-  window.requestAnimationFrame(function render() {
-    easeScroll();
-    window.requestAnimationFrame(render);
-  });
+    // Start the rendering loop for smooth scroll
+    window.requestAnimationFrame(function render() {
+      easeScroll();
+      window.requestAnimationFrame(render);
+    });
+  }
 
   // Intersection Observer to show/hide elements based on visibility
   const observer = new IntersectionObserver((entries) => {

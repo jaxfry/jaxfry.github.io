@@ -15,7 +15,7 @@ Aura is an AI V-tuber written in python and uses Neo-GPT as the model using an A
 It has image recognition using some sort of random model that I forgot.
 
 Want to download it to try?
-I might put it on my Github (@jaxfry) in the future. As of now, their is no download as I am too lazy. If people actually want this let me know on discord.
+I might put it on my Github (@jaxfry) in the future. As of now, there is no download as I am too lazy. If people actually want this let me know on discord.
 
 APIs are helpful!
 

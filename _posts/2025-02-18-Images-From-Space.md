@@ -2,7 +2,7 @@
 layout: post
 title:  "Images From Space 🚀"
 ---
-**Hello Everyone!** A while ago I bought an SDR radio with the goal of making my own QFH antenna to get images directly from weather satelites... And I succeeded! The following images are taken from one of the NOAA sattelites in the IR and Visual spectrum.
+**Hello Everyone!** A while ago I bought an SDR radio with the goal of making my own QFH antenna to get images directly from weather satellites... And I succeeded! The following images are taken from one of the NOAA satellites in the IR and Visual spectrum.
 
 
 ## Photos
