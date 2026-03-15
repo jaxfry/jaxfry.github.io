@@ -16,9 +16,22 @@
     <meta name="author" content="{{ site.author.name }}">
     <meta http-equiv="cache-control" content="Private" />
     <meta http-equiv="Expires" content="600" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{ page.title | default: site.title }}">
+    <meta property="og:description" content="{{ page.description | default: site.description | default: site.title }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    {% if page.image %}<meta property="og:image" content="{{ page.image | absolute_url }}">{% endif %}
+    <meta property="og:site_name" content="{{ site.title }}">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ 'favicon.ico' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ 'favicon-32x32.png' | relative_url }}">
+
     <title>{{ page.title | default: site.title }}</title>
 </head>
-<body>
+<body class="layout-{{ page.layout | default: 'page' }}">
     {% include nav.html type="page" %}
 
     <div class="cursor-dot" data-cursor-dot></div>
@@ -28,8 +41,6 @@
         {{ content }}
     </div>
     {% include footer.html %}
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous"></script>
     <script src="{{ 'assets/js/cursor.js' | relative_url }}"></script>
     <script defer src="{{ 'assets/js/scroll.js' | relative_url }}"></script>

@@ -4,7 +4,7 @@ category: "SDR"
 title-style: "QFH Antenna - <br/> <span style=\"padding-left: 50px; text-indent: 50px;\"> Getting Images from Space </span>"
 title: "QFH Antenna - Getting Images from Space"
 description: "I made a QFH antenna to get images from a NOAA weather satellite using an SDR."
-image: "/assets/images/hacked-client.png"
+image: "/assets/images/posts/2025-02-18/space1.png"
 alt: "Description of first image"
 ---
 
