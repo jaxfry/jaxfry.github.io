@@ -15,7 +15,7 @@
     <nav class="pf-topnav">
         <a href="{{ '/resume' | relative_url }}" class="pf-topnav-brand">Jaxon</a>
         <div class="pf-topnav-links">
-            <a href="{{ '/' | relative_url }}">JaxFry <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+            <a href="{{ '/' | relative_url }}" id="jaxfry-home-link">JaxFry <i class="fa-solid fa-arrow-right fa-xs"></i></a>
         </div>
     </nav>
 
@@ -24,5 +24,31 @@
     <footer class="pf-footer">
         <p>&copy; {{ 'now' | date: '%Y' }} Jaxon &middot; <a href="/">JaxFry</a></p>
     </footer>
+    <script>
+        (function () {
+            var link = document.getElementById('jaxfry-home-link');
+            if (!link) return;
+
+            var isJaxfryDomain = function (host) {
+                return host === 'jaxfry.xyz' || host === 'www.jaxfry.xyz';
+            };
+
+            var currentHost = window.location.hostname;
+            var fromReferrer = false;
+
+            if (document.referrer) {
+                try {
+                    var refHost = new URL(document.referrer).hostname;
+                    fromReferrer = isJaxfryDomain(refHost);
+                } catch (e) {
+                    fromReferrer = false;
+                }
+            }
+
+            if (isJaxfryDomain(currentHost) || fromReferrer) {
+                link.style.display = 'none';
+            }
+        })();
+    </script>
 </body>
 </html>
