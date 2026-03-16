@@ -46,13 +46,20 @@
                 }
             }
 
-            if (homeLink && (isJaxfryDomain(currentHost) || fromReferrer)) {
+            var fromJaxfry = isJaxfryDomain(currentHost) || fromReferrer;
+
+            if (homeLink && fromJaxfry) {
                 homeLink.style.display = 'none';
             }
 
             var emailLink = document.getElementById('email-link');
             var emailLinkNav = document.getElementById('email-link-nav');
             var emailLinkFooter = document.getElementById('email-link-footer');
+
+            if (emailLink && fromJaxfry) {
+                emailLink.classList.add('pf-email-priority');
+            }
+
             if (emailLink || emailLinkNav || emailLinkFooter) {
                 var p1 = [106, 97, 120, 102, 114, 121];
                 var p2 = [105, 99, 108, 111, 117, 100];

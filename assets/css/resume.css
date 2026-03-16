@@ -145,6 +145,15 @@ body::after {
     color: #fff;
 }
 
+.pf-hero-links a.pf-email-priority {
+    background: var(--pf-accent);
+    color: #fff;
+}
+
+.pf-hero-links a.pf-email-priority:hover {
+    opacity: 0.9;
+}
+
 /* ===== Sections ===== */
 
 .pf-section {
