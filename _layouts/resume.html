@@ -26,8 +26,7 @@
     </footer>
     <script>
         (function () {
-            var link = document.getElementById('jaxfry-home-link');
-            if (!link) return;
+            var homeLink = document.getElementById('jaxfry-home-link');
 
             var isJaxfryDomain = function (host) {
                 return host === 'jaxfry.xyz' || host === 'www.jaxfry.xyz';
@@ -45,8 +44,20 @@
                 }
             }
 
-            if (isJaxfryDomain(currentHost) || fromReferrer) {
-                link.style.display = 'none';
+            if (homeLink && (isJaxfryDomain(currentHost) || fromReferrer)) {
+                homeLink.style.display = 'none';
+            }
+
+            var emailLink = document.getElementById('email-link');
+            if (emailLink) {
+                var p1 = [106, 97, 120, 102, 114, 121];
+                var p2 = [105, 99, 108, 111, 117, 100];
+                var decode = function (codes) {
+                    return String.fromCharCode.apply(null, codes);
+                };
+                var address = decode(p1) + '@' + decode(p2) + '.com';
+                emailLink.setAttribute('href', 'mailto:' + address);
+                emailLink.setAttribute('title', address);
             }
         })();
     </script>
