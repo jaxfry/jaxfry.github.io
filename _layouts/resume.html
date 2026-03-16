@@ -15,6 +15,7 @@
     <nav class="pf-topnav">
         <a href="{{ '/resume' | relative_url }}" class="pf-topnav-brand">Jaxon</a>
         <div class="pf-topnav-links">
+            <a href="#" id="email-link-nav" class="pf-nav-email"><i class="fa-solid fa-envelope"></i> Email Me</a>
             <a href="{{ '/' | relative_url }}" id="jaxfry-home-link">JaxFry <i class="fa-solid fa-arrow-right fa-xs"></i></a>
         </div>
     </nav>
@@ -22,6 +23,7 @@
     {{ content }}
 
     <footer class="pf-footer">
+        <p><a href="#" id="email-link-footer"><i class="fa-solid fa-envelope"></i> Email Me</a></p>
         <p>&copy; {{ 'now' | date: '%Y' }} Jaxon &middot; <a href="/">JaxFry</a></p>
     </footer>
     <script>
@@ -49,15 +51,21 @@
             }
 
             var emailLink = document.getElementById('email-link');
-            if (emailLink) {
+            var emailLinkNav = document.getElementById('email-link-nav');
+            var emailLinkFooter = document.getElementById('email-link-footer');
+            if (emailLink || emailLinkNav || emailLinkFooter) {
                 var p1 = [106, 97, 120, 102, 114, 121];
                 var p2 = [105, 99, 108, 111, 117, 100];
                 var decode = function (codes) {
                     return String.fromCharCode.apply(null, codes);
                 };
                 var address = decode(p1) + '@' + decode(p2) + '.com';
-                emailLink.setAttribute('href', 'mailto:' + address);
-                emailLink.setAttribute('title', address);
+                [emailLink, emailLinkNav, emailLinkFooter].forEach(function (el) {
+                    if (el) {
+                        el.setAttribute('href', 'mailto:' + address);
+                        el.setAttribute('title', address);
+                    }
+                });
             }
         })();
     </script>

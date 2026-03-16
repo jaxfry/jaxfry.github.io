@@ -69,6 +69,23 @@ body::after {
     color: var(--pf-accent);
 }
 
+.pf-nav-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: var(--pf-accent);
+    color: #fff !important;
+    padding: 0.3rem 0.85rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.pf-nav-email:hover {
+    opacity: 0.85;
+    color: #fff !important;
+}
+
 /* ===== Hero Section ===== */
 
 .pf-hero {
