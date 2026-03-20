@@ -284,9 +284,9 @@ body::after {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
 }
 
 .pf-cyber-list li {
@@ -355,6 +355,14 @@ body::after {
     color: var(--pf-text-light);
 }
 
+.pf-edu-item.pf-edu-no-date {
+    justify-content: flex-start;
+}
+
+.pf-edu-item.pf-edu-no-date span:last-child {
+    display: none;
+}
+
 /* ===== Footer ===== */
 
 .pf-footer {
@@ -390,10 +398,6 @@ body::after {
     .pf-exp-header {
         flex-direction: column;
         gap: 0.15rem;
-    }
-
-    .pf-cyber-list {
-        grid-template-columns: 1fr;
     }
 
     .pf-topnav {
