@@ -3,7 +3,7 @@ layout: post
 title:  "Anime Convention 🎌"
 ---
 
-**Hello Everyone!** I went to my third Anime Revolution this year and I had such a blast. It was awesome seeing all the cosplaying. Some of them were so meticulous and insane. So cool. I ended up getting some awesome posters, stickers, and prints (more about that later), and overall it was just such a fun time. I'm already excited to hopefully go again next year!
+**Hello Everyone!** This year was my third time at Anime Revolution, and I had such a blast. It was awesome seeing all the cosplaying. Some of them were so meticulous and insane. So cool. I ended up getting some awesome posters, stickers, and prints (more about that later), and overall it was just such a fun time. I'm already excited to hopefully go again next year!
 
 ## Panels
 
