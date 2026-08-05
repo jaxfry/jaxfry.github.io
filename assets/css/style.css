@@ -765,6 +765,12 @@ p {
     font-family: var(--font-family-body);
 }
 
+.post-content img {
+    width: 100%;
+    height: auto;
+    margin: 1rem 0;
+}
+
 /* Project detail pages */
 .iproject {
     margin: 2rem 60px 0;
