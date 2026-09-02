@@ -1,6 +1,7 @@
 title: JaxFry
 description: A website made by JaxFry.
 url: https://jaxfry.github.io
+cloudflare_web_analytics_token: ""
 
 collections:
   projects:
