@@ -37,6 +37,9 @@
             y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
         })(window, document, "clarity", "script", "ybr6nasnrl");
     </script>
+    {% if site.cloudflare_web_analytics_token and site.cloudflare_web_analytics_token != "" %}
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ site.cloudflare_web_analytics_token }}"}'></script>
+    {% endif %}
 </head>
 <body class="layout-{{ page.layout | default: 'page' }}">
     {% include nav.html type="page" %}
